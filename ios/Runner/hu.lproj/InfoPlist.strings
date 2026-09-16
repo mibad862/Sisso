@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Az alkalmazásnak hozzá kell férnie a kamerához a QR-kód vagy vonalkód olvasó funkcióhoz, amely a keresősávból érhető el";
+"NSFaceIDUsageDescription" = "Az alkalmazásnak hozzá kell férnie a Touch ID-hoz és a Face ID-hoz a bejelentkezéshez";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Az alkalmazásnak hozzá kell férnie a tartózkodási helyéhez, hogy megjelenítse azt a térképernyőn, és helyalapú szolgáltatásokat nyújtson.";
+"NSLocationAlwaysUsageDescription" = "Az alkalmazásnak hozzá kell férnie a tartózkodási helyéhez, hogy megjelenítse azt a térképernyőn, és helyalapú szolgáltatásokat nyújtson.";
+"NSLocationWhenInUseUsageDescription" = "Az alkalmazásnak hozzá kell férnie a tartózkodási helyéhez, hogy megjelenítse azt a térképernyőn, és helyalapú szolgáltatásokat nyújtson.";
+"NSMicrophoneUsageDescription" = "Szeretnénk hozzáférni a mikrofonhoz, hogy hangüzeneteket rögzíthessen";
+"NSPhotoLibraryAddUsageDescription" = "Szeretnénk hozzáférni ahhoz, hogy képeket/videókat mentsünk a Fotók könyvtárába";
+"NSPhotoLibraryUsageDescription" = "Az alkalmazásnak hozzá kell férnie a fotókönyvtárához, որպեսզի kiválaszthassa a profilképként használni kívánt fotót.";
+"NSSpeechRecognitionUsageDescription" = "Az alkalmazásnak szüksége van a beszédfelismerés engedélyére";
+"NSUserTrackingUsageDescription" = "Ez az azonosító személyre szabott hirdetések megjelenítésére szolgál. Az „App ne kövesse nyomon” beállítás korlátozza a hirdetési hálózatok azon képességét, hogy releváns hirdetéseket jelenítsenek meg Önnek, de nem csökkenti a kapott hirdetések számát.";

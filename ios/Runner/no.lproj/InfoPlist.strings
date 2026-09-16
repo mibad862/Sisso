@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Denne appen krever tilgang til kameraet for QR-kode- eller strekkodeskannerfunksjonen, som kan åpnes fra søkefeltet";
+"NSFaceIDUsageDescription" = "Denne appen krever tilgang til Touch ID og Face ID for å logge inn i appen";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Denne appen trenger tilgang til posisjonen din for å vises på kartskjermen og tilby posisjonsbaserte tjenester.";
+"NSLocationAlwaysUsageDescription" = "Denne appen trenger tilgang til posisjonen din for å vises på kartskjermen og tilby posisjonsbaserte tjenester.";
+"NSLocationWhenInUseUsageDescription" = "Denne appen trenger tilgang til posisjonen din for å vises på kartskjermen og tilby posisjonsbaserte tjenester.";
+"NSMicrophoneUsageDescription" = "Vi ønsker tilgang til mikrofonen for å kunne ta opp talemeldinger";
+"NSPhotoLibraryAddUsageDescription" = "Vi ønsker tilgang til å lagre bilder/videoer i bildebiblioteket ditt";
+"NSPhotoLibraryUsageDescription" = "Denne appen krever tilgang til bildebiblioteket ditt for å velge bildet som skal brukes som profilbilde.";
+"NSSpeechRecognitionUsageDescription" = "Denne applikasjonen trenger tillatelse til talegjenkjenning";
+"NSUserTrackingUsageDescription" = "Denne identifikatoren vil bli brukt til å levere personlige annonser til deg. \"Ikke tillat sporing\" vil begrense annonse-nettverkets mulighet til å levere relevante annonser til deg, men vil ikke redusere antallet annonser du mottar.";

@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Aplikazio honek kamerarako sarbidea behar du QR kode edo barra-kodeen eskaner funtziorako, eta bilaketa-barratik atzi daiteke";
+"NSFaceIDUsageDescription" = "Aplikazio honek Touch ID eta Face IDrako sarbidea behar du aplikazioan saioa hasteko";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Aplikazio honek zure kokapenerako sarbidea behar du maparen pantailan erakusteko eta kokapenean oinarritutako zerbitzuak eskaintzeko.";
+"NSLocationAlwaysUsageDescription" = "Aplikazio honek zure kokapenerako sarbidea behar du maparen pantailan erakusteko eta kokapenean oinarritutako zerbitzuak eskaintzeko.";
+"NSLocationWhenInUseUsageDescription" = "Aplikazio honek zure kokapenerako sarbidea behar du maparen pantailan erakusteko eta kokapenean oinarritutako zerbitzuak eskaintzeko.";
+"NSMicrophoneUsageDescription" = "Mikrofonorako sarbidea izan nahiko genuke ahots-mezuak grabatzea ahalbidetzeko";
+"NSPhotoLibraryAddUsageDescription" = "Zure Argazki Liburutegian irudiak/bideoak gordetzeko sarbidea izan nahiko genuke";
+"NSPhotoLibraryUsageDescription" = "Aplikazio honek zure argazki-liburutegirako sarbidea behar du zure profileko argazki gisa erabiliko den argazkia hautatzeko.";
+"NSSpeechRecognitionUsageDescription" = "Aplikazio honek hizketa-ezagutzeko baimena behar du";
+"NSUserTrackingUsageDescription" = "Identifikatzaile hau iragarki pertsonalizatuak eskaintzeko erabiliko da. \"Ez utzi aplikazioari jarraipena egiten\" aukerak iragarki-sareak zuretzat garrantzitsuak diren iragarkiak eskaintzeko duen gaitasuna mugatuko du, baina ez du jasoko dituzun iragarkien kopurua murriztuko.";

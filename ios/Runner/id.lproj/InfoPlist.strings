@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Aplikasi ini memerlukan akses ke kamera untuk fitur pemindai QR Code atau Barcode yang dapat diakses dari bilah pencarian";
+"NSFaceIDUsageDescription" = "Aplikasi ini memerlukan akses ke Touch ID dan Face ID untuk masuk ke aplikasi";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Aplikasi ini memerlukan akses ke lokasi Anda untuk ditampilkan di layar peta dan menyediakan layanan berbasis lokasi.";
+"NSLocationAlwaysUsageDescription" = "Aplikasi ini memerlukan akses ke lokasi Anda untuk ditampilkan di layar peta dan menyediakan layanan berbasis lokasi.";
+"NSLocationWhenInUseUsageDescription" = "Aplikasi ini memerlukan akses ke lokasi Anda untuk ditampilkan di layar peta dan menyediakan layanan berbasis lokasi.";
+"NSMicrophoneUsageDescription" = "Kami ingin akses ke mikrofon untuk memungkinkan perekaman pesan suara";
+"NSPhotoLibraryAddUsageDescription" = "Kami ingin akses untuk menyimpan Gambar/Video di Perpustakaan Foto Anda";
+"NSPhotoLibraryUsageDescription" = "Aplikasi ini memerlukan akses ke perpustakaan foto Anda untuk memilih foto yang akan digunakan sebagai foto profil Anda.";
+"NSSpeechRecognitionUsageDescription" = "Aplikasi ini memerlukan izin pengenalan suara";
+"NSUserTrackingUsageDescription" = "Pengenal ini akan digunakan untuk menayangkan iklan yang dipersonalisasi kepada Anda. \"Minta Aplikasi untuk Tidak Melacak\" akan membatasi kemampuan jaringan iklan untuk menayangkan iklan yang relevan kepada Anda, tetapi tidak akan mengurangi jumlah iklan yang Anda terima.";

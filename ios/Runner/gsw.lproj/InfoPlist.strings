@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "D App brucht Zugriff uf d Kamera für d QR-Code- oder Barcode-Scanner-Funktion, wo über d Suchleiste ufgruefe werde cha";
+"NSFaceIDUsageDescription" = "D App brucht Zugriff uf Touch ID und Face ID, zum i de App iizlogge";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "D App brucht Zugriff uf dini Position, zum sie uf em Karte-Bildschirm aazeige und standortbasierte Dienscht aabiete.";
+"NSLocationAlwaysUsageDescription" = "D App brucht Zugriff uf dini Position, zum sie uf em Karte-Bildschirm aazeige und standortbasierte Dienscht aabiete.";
+"NSLocationWhenInUseUsageDescription" = "D App brucht Zugriff uf dini Position, zum sie uf em Karte-Bildschirm aazeige und standortbasierte Dienscht aabiete.";
+"NSMicrophoneUsageDescription" = "Mir wänd Zugriff uf s Mikrofon, zum Sprachmitteilige ufzeichne z'ermögliche";
+"NSPhotoLibraryAddUsageDescription" = "Mir wänd Zugriff, zum Bilder/Videos i diner Foto-Mediathek z'speichere";
+"NSPhotoLibraryUsageDescription" = "D App brucht Zugriff uf dini Foto-Mediathek, zum s Foto uszähle, wo als dis Profilbild brucht wird.";
+"NSSpeechRecognitionUsageDescription" = "D Applikation brucht d Berechtigung für Spracherkennunig";
+"NSUserTrackingUsageDescription" = "D Identifikator wird verwendet, um dir personalisierti Werbig z'zeige. \"App bitte nöd verfolge\" schränkt d Fähigkeite vom Werbenetzwerk i, dir relevanti Werbig z'zeige, reduziert aber d Aazahl vo Werbig, wo du bechunsch, nöd.";

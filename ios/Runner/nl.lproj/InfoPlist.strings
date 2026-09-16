@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Deze app heeft toegang tot de camera nodig voor de QR-code- of barcodescannerfunctie, die via de zoekbalk toegankelijk is";
+"NSFaceIDUsageDescription" = "Deze app heeft toegang nodig tot Touch ID en Face ID om in te loggen in de app";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Deze app heeft toegang tot uw locatie nodig om deze op het kaartscherm weer te geven en locatiegebaseerde services te bieden.";
+"NSLocationAlwaysUsageDescription" = "Deze app heeft toegang tot uw locatie nodig om deze op het kaartscherm weer te geven en locatiegebaseerde services te bieden.";
+"NSLocationWhenInUseUsageDescription" = "Deze app heeft toegang tot uw locatie nodig om deze op het kaartscherm weer te geven en locatiegebaseerde services te bieden.";
+"NSMicrophoneUsageDescription" = "We willen toegang tot de microfoon om spraakberichten op te nemen";
+"NSPhotoLibraryAddUsageDescription" = "We willen toegang om afbeeldingen/video's op te slaan in uw Foto's-bibliotheek";
+"NSPhotoLibraryUsageDescription" = "Deze app heeft toegang tot uw fotobibliotheek nodig om de foto te selecteren die u als profielfoto wilt gebruiken.";
+"NSSpeechRecognitionUsageDescription" = "Deze app heeft toestemming voor spraakherkenning nodig";
+"NSUserTrackingUsageDescription" = "Deze identificatie wordt gebruikt om u gepersonaliseerde advertenties te tonen. \"Vraag app niet te volgen\" beperkt het vermogen van advertentienetwerken om relevante advertenties te tonen, maar vermindert niet het aantal advertenties dat u ontvangt.";

@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Teastaíonn rochtain ar an gceamara ón aip seo chun an ghné scanóra QR Code nó Barcode a úsáid, ar féidir rochtain a fháil uirthi ón mbarra cuardaigh";
+"NSFaceIDUsageDescription" = "Teastaíonn rochtain ar Touch ID agus Face ID ón aip seo chun logáil isteach san aip";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Teastaíonn rochtain ar do shuíomh ón aip seo chun é a thaispeáint ar an scáileán léarscáile agus chun seirbhísí bunaithe ar shuíomh a sholáthar.";
+"NSLocationAlwaysUsageDescription" = "Teastaíonn rochtain ar do shuíomh ón aip seo chun é a thaispeáint ar an scáileán léarscáile agus chun seirbhísí bunaithe ar shuíomh a sholáthar.";
+"NSLocationWhenInUseUsageDescription" = "Teastaíonn rochtain ar do shuíomh ón aip seo chun é a thaispeáint ar an scáileán léarscáile agus chun seirbhísí bunaithe ar shuíomh a sholáthar.";
+"NSMicrophoneUsageDescription" = "Ba mhaith linn rochtain a fháil ar an micreafón chun teachtaireachtaí gutha a thaifeadadh a cheadú";
+"NSPhotoLibraryAddUsageDescription" = "Ba mhaith linn rochtain a fháil chun Íomhánna/Físeáin a stóráil i do Leabharlann Grianghraf";
+"NSPhotoLibraryUsageDescription" = "Teastaíonn rochtain ar do leabharlann grianghraf ón aip seo chun an grianghraf a roghnú le húsáid mar do phictiúr próifíle.";
+"NSSpeechRecognitionUsageDescription" = "Teastaíonn cead aitheanta cainte ón bhfeidhmchlár seo";
+"NSUserTrackingUsageDescription" = "Úsáidfear an t-aitheantóir seo chun fógraí pearsantaithe a sheachadadh duit. Cuirfidh \"Ask App Not to track\" teorainn le cumas líonra na bhfógraí fógraí ábhartha a sheachadadh duit ach ní laghdóidh sé líon na bhfógraí a fhaigheann tú.";

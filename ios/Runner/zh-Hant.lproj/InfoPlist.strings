@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "此 App 需要存取相機，以使用可從搜尋列開啟的 QR Code 或條碼掃描功能";
+"NSFaceIDUsageDescription" = "此 App 需要存取 Touch ID 和 Face ID 以登入應用程式";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "此 App 需要存取您的位置，以便在地圖畫面上顯示並提供基於位置的服務。";
+"NSLocationAlwaysUsageDescription" = "此 App 需要存取您的位置，以便在地圖畫面上顯示並提供基於位置的服務。";
+"NSLocationWhenInUseUsageDescription" = "此 App 需要存取您的位置，以便在地圖畫面上顯示並提供基於位置的服務。";
+"NSMicrophoneUsageDescription" = "我們希望取得麥克風存取權，以允許錄製語音訊息";
+"NSPhotoLibraryAddUsageDescription" = "我們希望取得存取權，以將圖片／影片儲存到您的照片圖庫";
+"NSPhotoLibraryUsageDescription" = "此 App 需要存取您的照片圖庫，以選取照片作為您的個人頭像。";
+"NSSpeechRecognitionUsageDescription" = "此應用程式需要語音辨識權限";
+"NSUserTrackingUsageDescription" = "此識別碼將用於向您提供個人化廣告。「要求 App 不要追蹤」會限制廣告網路向您提供相關廣告的能力，但不會減少您收到的廣告數量。";

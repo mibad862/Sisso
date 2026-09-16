@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "এই এপটোৱে QR Code বা Barcode স্ক্যানাৰ ফিচাৰৰ বাবে কেমেৰালৈ প্ৰৱেশাধিকাৰ প্ৰয়োজন, যি search bar ৰ পৰা ব্যৱহাৰ কৰিব পাৰি";
+"NSFaceIDUsageDescription" = "এই এপটোত লগ ইন কৰিবলৈ Touch ID আৰু Face ID ৰ প্ৰৱেশাধিকাৰ প্ৰয়োজন";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "মানচিত্ৰ স্ক্ৰিনত দেখুৱাবলৈ আৰু location-based সেৱাসমূহ প্ৰদান কৰিবলৈ এই এপটোক আপোনাৰ অৱস্থানলৈ প্ৰৱেশাধিকাৰ প্ৰয়োজন।";
+"NSLocationAlwaysUsageDescription" = "মানচিত্ৰ স্ক্ৰিনত দেখুৱাবলৈ আৰু location-based সেৱাসমূহ প্ৰদান কৰিবলৈ এই এপটোক আপোনাৰ অৱস্থানলৈ প্ৰৱেশাধিকাৰ প্ৰয়োজন।";
+"NSLocationWhenInUseUsageDescription" = "মানচিত্ৰ স্ক্ৰিনত দেখুৱাবলৈ আৰু location-based সেৱাসমূহ প্ৰদান কৰিবলৈ এই এপটোক আপোনাৰ অৱস্থানলৈ প্ৰৱেশাধিকাৰ প্ৰয়োজন।";
+"NSMicrophoneUsageDescription" = "আমি voice message ৰেকৰ্ডিং কৰিবলৈ মাইক্ৰ’ফোনলৈ প্ৰৱেশাধিকাৰ বিচাৰোঁ";
+"NSPhotoLibraryAddUsageDescription" = "আমি আপোনাৰ Photo Library ত Image/Video সংৰক্ষণ কৰিবলৈ প্ৰৱেশাধিকাৰ বিচাৰোঁ";
+"NSPhotoLibraryUsageDescription" = "এই এপটোক আপোনাৰ photo library লৈ প্ৰৱেশাধিকাৰ প্ৰয়োজন, যাতে আপোনাৰ profile picture হিচাপে ব্যৱহাৰ কৰিবলৈ ফটো বাছনি কৰিব পাৰি।";
+"NSSpeechRecognitionUsageDescription" = "এই এপ্লিকেশ্যনৰ speech recognition অনুমতিৰ প্ৰয়োজন";
+"NSUserTrackingUsageDescription" = "এই identifier আপোনাক personalized ads দেখুৱাবলৈ ব্যৱহাৰ কৰা হ’ব। \"Ask App Not to track\" এ Advertisement network ৰ আপোনালৈ প্ৰাসংগিক ads দেখুৱাব পৰা ক্ষমতা সীমিত কৰিব, কিন্তু আপুনি পোৱা ads ৰ সংখ্যা কমাব নোৱাৰে।";

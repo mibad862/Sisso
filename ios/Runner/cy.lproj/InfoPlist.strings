@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Mae angen i’r ap hwn gael mynediad i’r camera ar gyfer y nodwedd sganio Cod QR neu God Bar, y gellir ei chyrchu o’r bar chwilio";
+"NSFaceIDUsageDescription" = "Mae angen i’r ap hwn gael mynediad i Touch ID a Face ID i fewngofnodi i’r ap";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Mae angen i’r ap hwn gael mynediad i’ch lleoliad i’w ddangos ar y sgrin map ac i ddarparu gwasanaethau sy’n seiliedig ar leoliad.";
+"NSLocationAlwaysUsageDescription" = "Mae angen i’r ap hwn gael mynediad i’ch lleoliad i’w ddangos ar y sgrin map ac i ddarparu gwasanaethau sy’n seiliedig ar leoliad.";
+"NSLocationWhenInUseUsageDescription" = "Mae angen i’r ap hwn gael mynediad i’ch lleoliad i’w ddangos ar y sgrin map ac i ddarparu gwasanaethau sy’n seiliedig ar leoliad.";
+"NSMicrophoneUsageDescription" = "Hoffem gael mynediad i’r meicroffon er mwyn caniatáu recordio negeseuon llais";
+"NSPhotoLibraryAddUsageDescription" = "Hoffem gael mynediad i storio delweddau/fideos yn eich Llyfrgell Lluniau";
+"NSPhotoLibraryUsageDescription" = "Mae angen i’r ap hwn gael mynediad i’ch llyfrgell luniau i ddewis y llun i’w ddefnyddio fel eich llun proffil.";
+"NSSpeechRecognitionUsageDescription" = "Mae angen i’r rhaglen hon ganiatâd adnabod lleferydd";
+"NSUserTrackingUsageDescription" = "Bydd y dynodwr hwn yn cael ei ddefnyddio i gyflwyno hysbysebion personol i chi. Bydd \"Gofyn i’r Ap beidio â thracio\" yn cyfyngu ar allu’r rhwydwaith hysbysebu i gyflwyno hysbysebion perthnasol i chi ond ni fydd yn lleihau nifer yr hysbysebion a gewch.";

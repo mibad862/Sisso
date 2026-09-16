@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Aplikasi ini memerlukan akses kepada kamera untuk ciri pengimbas Kod QR atau Kod Bar yang boleh diakses dari bar carian";
+"NSFaceIDUsageDescription" = "Aplikasi ini memerlukan akses kepada Touch ID dan Face ID untuk log masuk ke dalam aplikasi";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Aplikasi ini memerlukan akses kepada lokasi anda untuk dipaparkan pada skrin peta dan menyediakan perkhidmatan berasaskan lokasi.";
+"NSLocationAlwaysUsageDescription" = "Aplikasi ini memerlukan akses kepada lokasi anda untuk dipaparkan pada skrin peta dan menyediakan perkhidmatan berasaskan lokasi.";
+"NSLocationWhenInUseUsageDescription" = "Aplikasi ini memerlukan akses kepada lokasi anda untuk dipaparkan pada skrin peta dan menyediakan perkhidmatan berasaskan lokasi.";
+"NSMicrophoneUsageDescription" = "Kami ingin mendapatkan akses kepada mikrofon untuk membolehkan rakaman mesej suara";
+"NSPhotoLibraryAddUsageDescription" = "Kami ingin mendapatkan akses untuk menyimpan Imej/Video dalam Pustaka Foto anda";
+"NSPhotoLibraryUsageDescription" = "Aplikasi ini memerlukan akses kepada pustaka foto anda untuk memilih foto yang akan digunakan sebagai gambar profil anda.";
+"NSSpeechRecognitionUsageDescription" = "Aplikasi ini memerlukan kebenaran pengecaman pertuturan";
+"NSUserTrackingUsageDescription" = "Pengecam ini akan digunakan untuk memaparkan iklan yang diperibadikan kepada anda. \"Minta Aplikasi Jangan Jejak\" akan mengehadkan keupayaan rangkaian pengiklanan untuk memaparkan iklan yang relevan kepada anda tetapi tidak akan mengurangkan jumlah iklan yang anda terima.";

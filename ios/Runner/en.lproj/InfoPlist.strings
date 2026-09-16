@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "This app requires access to the camera for QR Code or Barcode scanner feature which can be access from the search bar";
+"NSFaceIDUsageDescription" = "This app requires access to Touch ID and Face ID to log in to the app";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "This app needs access to your location to show it on the map screen and provide location-based services.";
+"NSLocationAlwaysUsageDescription" = "This app needs access to your location to show it on the map screen and provide location-based services.";
+"NSLocationWhenInUseUsageDescription" = "This app needs access to your location to show it on the map screen and provide location-based services.";
+"NSMicrophoneUsageDescription" = "We would like access to the microphone to allow recording voice messages";
+"NSPhotoLibraryAddUsageDescription" = "We would like access to store images/videos in your Photo Library";
+"NSPhotoLibraryUsageDescription" = "This app requires access to your photo library to select the photo to use as your profile picture.";
+"NSSpeechRecognitionUsageDescription" = "This application needs speech recognition permission";
+"NSUserTrackingUsageDescription" = "This identifier will be used to deliver personalized ads to you. \"Ask App Not to Track\" will limit the advertisement network's ability to deliver relevant ads to you but will not reduce the number of ads you receive.";

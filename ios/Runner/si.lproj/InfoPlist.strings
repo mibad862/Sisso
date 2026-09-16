@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "මෙම යෙදුමට QR කේතය හෝ බාර්කෝඩ් ස්කෑනර් විශේෂාංගය සඳහා කැමරාවට ප්‍රවේශය අවශ්‍ය වන අතර එය සෙවුම් තීරුවෙන් ප්‍රවේශ කළ හැකිය";
+"NSFaceIDUsageDescription" = "මෙම යෙදුමට ලොග් වීමට Touch ID සහ Face ID වෙත ප්‍රවේශය අවශ්‍ය වේ";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "මෙම යෙදුමට සිතියම් තිරයේ පෙන්වීමට සහ ස්ථාන-පදනම් සේවා ලබා දීමට ඔබගේ ස්ථානයට ප්‍රවේශය අවශ්‍ය වේ.";
+"NSLocationAlwaysUsageDescription" = "මෙම යෙදුමට සිතියම් තිරයේ පෙන්වීමට සහ ස්ථාන-පදනම් සේවා ලබා දීමට ඔබගේ ස්ථානයට ප්‍රවේශය අවශ්‍ය වේ.";
+"NSLocationWhenInUseUsageDescription" = "මෙම යෙදුමට සිතියම් තිරයේ පෙන්වීමට සහ ස්ථාන-පදනම් සේවා ලබා දීමට ඔබගේ ස්ථානයට ප්‍රවේශය අවශ්‍ය වේ.";
+"NSMicrophoneUsageDescription" = "හඬ පණිවිඩ පටිගත කිරීමට ඉඩ දීම සඳහා මයික්‍රෆෝනයට ප්‍රවේශය ලබා දීමට අපි කැමැත්තෙමු";
+"NSPhotoLibraryAddUsageDescription" = "ඔබගේ Photo Library තුළ රූප/වීඩියෝ ගබඩා කිරීමට ප්‍රවේශය ලබා දීමට අපි කැමැත්තෙමු";
+"NSPhotoLibraryUsageDescription" = "ඔබගේ පැතිකඩ පින්තූරය ලෙස භාවිත කිරීමට ඡායාරූපය තේරීමට මෙම යෙදුමට ඔබගේ photo library වෙත ප්‍රවේශය අවශ්‍ය වේ.";
+"NSSpeechRecognitionUsageDescription" = "මෙම යෙදුමට කථන හඳුනාගැනීමේ අවසරය අවශ්‍ය වේ";
+"NSUserTrackingUsageDescription" = "මෙම හඳුනාගැනීමේ අංකය ඔබට පුද්ගලීකරණය කළ දැන්වීම් ලබා දීමට භාවිත කෙරේ. \"Ask App Not to track\" මඟින් ඔබට අදාළ දැන්වීම් ලබා දීමට දැන්වීම් ජාලයේ හැකියාව සීමා කරනු ඇත, නමුත් ඔබට ලැබෙන දැන්වීම් ගණන අඩු නොකරනු ඇත.";

@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Esta aplicación require acceso á cámara para a función de escáner de códigos QR ou de barras, á que se pode acceder desde a barra de busca";
+"NSFaceIDUsageDescription" = "Esta aplicación require acceso a Touch ID e Face ID para iniciar sesión na aplicación";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Esta aplicación necesita acceso á túa localización para mostralo na pantalla do mapa e ofrecer servizos baseados na localización.";
+"NSLocationAlwaysUsageDescription" = "Esta aplicación necesita acceso á túa localización para mostralo na pantalla do mapa e ofrecer servizos baseados na localización.";
+"NSLocationWhenInUseUsageDescription" = "Esta aplicación necesita acceso á túa localización para mostralo na pantalla do mapa e ofrecer servizos baseados na localización.";
+"NSMicrophoneUsageDescription" = "Gustaríanos ter acceso ao micrófono para permitir a gravación de mensaxes de voz";
+"NSPhotoLibraryAddUsageDescription" = "Gustaríanos ter acceso para gardar imaxes/vídeos na túa fototeca";
+"NSPhotoLibraryUsageDescription" = "Esta aplicación require acceso á túa fototeca para seleccionar a foto que se usará como imaxe de perfil.";
+"NSSpeechRecognitionUsageDescription" = "Esta aplicación necesita o permiso de recoñecemento de voz";
+"NSUserTrackingUsageDescription" = "Este identificador usarase para ofrecerche anuncios personalizados. \"Non permitir que a app me rastrexe\" limitará a capacidade da rede de publicidade para ofrecerche anuncios relevantes, pero non reducirá o número de anuncios que recibes.";

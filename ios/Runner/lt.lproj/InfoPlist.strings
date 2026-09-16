@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Šiai programai reikalinga prieiga prie kameros, kad būtų galima naudoti QR kodo arba brūkšninio kodo skaitytuvo funkciją, kurią galima pasiekti iš paieškos juostos";
+"NSFaceIDUsageDescription" = "Šiai programai reikalinga prieiga prie „Touch ID“ ir „Face ID“, kad būtų galima prisijungti prie programos";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Šiai programai reikalinga prieiga prie jūsų buvimo vietos, kad būtų galima ją rodyti žemėlapio ekrane ir teikti vietos pagrindu veikiančias paslaugas.";
+"NSLocationAlwaysUsageDescription" = "Šiai programai reikalinga prieiga prie jūsų buvimo vietos, kad būtų galima ją rodyti žemėlapio ekrane ir teikti vietos pagrindu veikiančias paslaugas.";
+"NSLocationWhenInUseUsageDescription" = "Šiai programai reikalinga prieiga prie jūsų buvimo vietos, kad būtų galima ją rodyti žemėlapio ekrane ir teikti vietos pagrindu veikiančias paslaugas.";
+"NSMicrophoneUsageDescription" = "Norėtume prieigos prie mikrofono, kad būtų galima įrašyti balso žinutes";
+"NSPhotoLibraryAddUsageDescription" = "Norėtume prieigos, kad galėtume saugoti paveikslėlius / vaizdo įrašus jūsų nuotraukų bibliotekoje";
+"NSPhotoLibraryUsageDescription" = "Šiai programai reikalinga prieiga prie jūsų nuotraukų bibliotekos, kad būtų galima pasirinkti nuotrauką profilio paveikslėliui.";
+"NSSpeechRecognitionUsageDescription" = "Šiai programai reikalingas kalbos atpažinimo leidimas";
+"NSUserTrackingUsageDescription" = "Šis identifikatorius bus naudojamas jums teikti suasmenintas reklamas. „Prašyti programos netraktuoti“ apribos reklamos tinklo galimybes pateikti jums aktualias reklamas, tačiau nesumažins rodomų reklamų skaičiaus.";

@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Šai lietotnei nepieciešama piekļuve kamerai, lai izmantotu QR koda vai svītrkoda skenera funkciju, kurai var piekļūt no meklēšanas joslas";
+"NSFaceIDUsageDescription" = "Šai lietotnei nepieciešama piekļuve Touch ID un Face ID, lai pieteiktos lietotnē";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Šai lietotnei nepieciešama piekļuve jūsu atrašanās vietai, lai to parādītu kartes ekrānā un nodrošinātu uz atrašanās vietu balstītus pakalpojumus.";
+"NSLocationAlwaysUsageDescription" = "Šai lietotnei nepieciešama piekļuve jūsu atrašanās vietai, lai to parādītu kartes ekrānā un nodrošinātu uz atrašanās vietu balstītus pakalpojumus.";
+"NSLocationWhenInUseUsageDescription" = "Šai lietotnei nepieciešama piekļuve jūsu atrašanās vietai, lai to parādītu kartes ekrānā un nodrošinātu uz atrašanās vietu balstītus pakalpojumus.";
+"NSMicrophoneUsageDescription" = "Mēs vēlētos piekļuvi mikrofonam, lai varētu ierakstīt balss ziņojumus";
+"NSPhotoLibraryAddUsageDescription" = "Mēs vēlētos piekļuvi, lai saglabātu attēlus/video jūsu fotoattēlu bibliotēkā";
+"NSPhotoLibraryUsageDescription" = "Šai lietotnei nepieciešama piekļuve jūsu fotoattēlu bibliotēkai, lai atlasītu fotoattēlu, ko izmantot kā jūsu profila attēlu.";
+"NSSpeechRecognitionUsageDescription" = "Šai lietotnei nepieciešama runas atpazīšanas atļauja";
+"NSUserTrackingUsageDescription" = "Šis identifikators tiks izmantots, lai jums rādītu personalizētas reklāmas. Opcija “Neļaut lietotnei izsekot” ierobežos reklāmas tīkla iespējas rādīt atbilstošas reklāmas, taču nesamazinās saņemto reklāmu skaitu.";

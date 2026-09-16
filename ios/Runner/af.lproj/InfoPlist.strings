@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Hierdie toepassing vereis toegang tot die kamera vir die QR-kode- of strepieskodeskandeerder-funksie, wat vanaf die soekbalk verkry kan word";
+"NSFaceIDUsageDescription" = "Hierdie toepassing vereis toegang tot Touch ID en Face ID om by die toepassing aan te meld";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Hierdie toepassing benodig toegang tot jou ligging om op die kaartskerm te wys en ligginggebaseerde dienste te verskaf.";
+"NSLocationAlwaysUsageDescription" = "Hierdie toepassing benodig toegang tot jou ligging om op die kaartskerm te wys en ligginggebaseerde dienste te verskaf.";
+"NSLocationWhenInUseUsageDescription" = "Hierdie toepassing benodig toegang tot jou ligging om op die kaartskerm te wys en ligginggebaseerde dienste te verskaf.";
+"NSMicrophoneUsageDescription" = "Ons wil toegang tot die mikrofoon hê om die opname van stemboodskappe toe te laat";
+"NSPhotoLibraryAddUsageDescription" = "Ons wil toegang hê om beelde/video's in jou Foto-biblioteek te stoor";
+"NSPhotoLibraryUsageDescription" = "Hierdie toepassing vereis toegang tot jou fotobiblioteek om die foto te kies wat as jou profielfoto gebruik moet word.";
+"NSSpeechRecognitionUsageDescription" = "Hierdie toepassing benodig die spraakherkenningspermit";
+"NSUserTrackingUsageDescription" = "Hierdie identifiseerder sal gebruik word om gepersonaliseerde advertensies aan jou te lewer. \"Moenie toelaat dat die toepassing naspoor nie\" sal die advertensienetwerk se vermoë beperk om relevante advertensies aan jou te lewer, maar sal nie die aantal advertensies wat jy ontvang verminder nie.";

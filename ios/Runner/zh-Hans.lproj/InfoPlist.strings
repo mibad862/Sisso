@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "此应用需要访问相机，以使用可从搜索栏访问的二维码或条形码扫描功能";
+"NSFaceIDUsageDescription" = "此应用需要访问 Touch ID 和 Face ID 以登录应用";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "此应用需要访问您的位置，以便在地图页面上显示并提供基于位置的服务。";
+"NSLocationAlwaysUsageDescription" = "此应用需要访问您的位置，以便在地图页面上显示并提供基于位置的服务。";
+"NSLocationWhenInUseUsageDescription" = "此应用需要访问您的位置，以便在地图页面上显示并提供基于位置的服务。";
+"NSMicrophoneUsageDescription" = "我们希望获得麦克风访问权限，以便录制语音消息";
+"NSPhotoLibraryAddUsageDescription" = "我们希望获得访问权限，以便将图片/视频保存到您的照片库中";
+"NSPhotoLibraryUsageDescription" = "此应用需要访问您的照片库，以选择照片作为您的个人资料图片。";
+"NSSpeechRecognitionUsageDescription" = "此应用需要语音识别权限";
+"NSUserTrackingUsageDescription" = "此标识符将用于向您投放个性化广告。“要求 App 不跟踪”将限制广告网络向您投放相关广告的能力，但不会减少您收到的广告数量。";

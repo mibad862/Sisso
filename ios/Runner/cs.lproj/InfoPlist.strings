@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Tato aplikace vyžaduje přístup k fotoaparátu pro funkci skeneru QR kódů nebo čárových kódů, ke které lze přistoupit z vyhledávacího pole";
+"NSFaceIDUsageDescription" = "Tato aplikace vyžaduje přístup k Touch ID a Face ID pro přihlášení do aplikace";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Tato aplikace potřebuje přístup k vaší poloze, aby ji mohla zobrazit na mapě a poskytovat služby založené na poloze.";
+"NSLocationAlwaysUsageDescription" = "Tato aplikace potřebuje přístup k vaší poloze, aby ji mohla zobrazit na mapě a poskytovat služby založené na poloze.";
+"NSLocationWhenInUseUsageDescription" = "Tato aplikace potřebuje přístup k vaší poloze, aby ji mohla zobrazit na mapě a poskytovat služby založené na poloze.";
+"NSMicrophoneUsageDescription" = "Rádi bychom měli přístup k mikrofonu, abychom umožnili nahrávání hlasových zpráv";
+"NSPhotoLibraryAddUsageDescription" = "Rádi bychom měli přístup k ukládání obrázků/videí do vaší Fotoknihovny";
+"NSPhotoLibraryUsageDescription" = "Tato aplikace vyžaduje přístup k vaší fotoknihovně, aby bylo možné vybrat fotografii pro váš profilový obrázek.";
+"NSSpeechRecognitionUsageDescription" = "Tato aplikace potřebuje oprávnění k rozpoznávání řeči";
+"NSUserTrackingUsageDescription" = "Tento identifikátor bude použit k zobrazování personalizovaných reklam. Volba „Požádat aplikaci, aby nesledovala“ omezí schopnost reklamních sítí zobrazovat vám relevantní reklamy, ale nesníží počet reklam, které uvidíte.";

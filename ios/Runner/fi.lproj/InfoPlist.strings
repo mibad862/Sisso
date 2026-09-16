@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Tämä sovellus tarvitsee pääsyn kameraan QR-koodi- tai viivakoodinlukutoimintoa varten, johon pääsee hakupalkista";
+"NSFaceIDUsageDescription" = "Tämä sovellus tarvitsee pääsyn Touch ID:hen ja Face ID:hen kirjautumista varten";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Tämä sovellus tarvitsee pääsyn sijaintiisi näyttääkseen sen karttanäkymässä ja tarjotakseen sijaintiin perustuvia palveluja.";
+"NSLocationAlwaysUsageDescription" = "Tämä sovellus tarvitsee pääsyn sijaintiisi näyttääkseen sen karttanäkymässä ja tarjotakseen sijaintiin perustuvia palveluja.";
+"NSLocationWhenInUseUsageDescription" = "Tämä sovellus tarvitsee pääsyn sijaintiisi näyttääkseen sen karttanäkymässä ja tarjotakseen sijaintiin perustuvia palveluja.";
+"NSMicrophoneUsageDescription" = "Haluaisimme pääsyn mikrofoniin, jotta voisit tallentaa ääniviestejä";
+"NSPhotoLibraryAddUsageDescription" = "Haluaisimme pääsyn kuvien/videoiden tallentamiseen Kuvat-kirjastoosi";
+"NSPhotoLibraryUsageDescription" = "Tämä sovellus tarvitsee pääsyn kuvakirjastoosi, jotta voit valita profiilikuvaksi käytettävän kuvan.";
+"NSSpeechRecognitionUsageDescription" = "Tämä sovellus tarvitsee puheentunnistuksen käyttöoikeuden";
+"NSUserTrackingUsageDescription" = "Tätä tunnistetta käytetään sinulle personoitujen mainosten näyttämiseen. \"Älä salli sovelluksen seurata\" rajoittaa mainosverkoston mahdollisuuksia näyttää sinulle osuvia mainoksia, mutta ei vähennä saamiesi mainosten määrää.";

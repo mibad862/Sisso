@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Den här appen kräver åtkomst till kameran för QR-kod- eller streckkodsläsarfunktionen, som kan nås från sökfältet";
+"NSFaceIDUsageDescription" = "Den här appen kräver åtkomst till Touch ID och Face ID för att logga in i appen";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Den här appen behöver åtkomst till din plats för att visa den på kartskärmen och tillhandahålla platsbaserade tjänster.";
+"NSLocationAlwaysUsageDescription" = "Den här appen behöver åtkomst till din plats för att visa den på kartskärmen och tillhandahålla platsbaserade tjänster.";
+"NSLocationWhenInUseUsageDescription" = "Den här appen behöver åtkomst till din plats för att visa den på kartskärmen och tillhandahålla platsbaserade tjänster.";
+"NSMicrophoneUsageDescription" = "Vi vill ha åtkomst till mikrofonen för att kunna spela in röstmeddelanden";
+"NSPhotoLibraryAddUsageDescription" = "Vi vill ha åtkomst för att lagra bilder/videor i ditt bildbibliotek";
+"NSPhotoLibraryUsageDescription" = "Den här appen kräver åtkomst till ditt bildbibliotek för att välja fotot som ska användas som din profilbild.";
+"NSSpeechRecognitionUsageDescription" = "Den här appen behöver behörighet för taligenkänning";
+"NSUserTrackingUsageDescription" = "Detta identifieringsnummer kommer att användas för att leverera personanpassade annonser till dig. \"Be appen att inte spåra\" kommer att begränsa annonsnätverkets möjlighet att leverera relevanta annonser till dig, men kommer inte att minska antalet annonser du får.";

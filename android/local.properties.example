@@ -1,0 +1,12 @@
+# TEMPLATE — copy to android/local.properties and fill in.
+# local.properties is gitignored.
+
+sdk.dir=/path/to/Android/sdk
+flutter.sdk=/path/to/flutter
+
+# Cardinal Commerce (3DS) Maven repo, required by the Braintree/PayPal SDK.
+# Credentials are the ones PayPal publishes in its Braintree 3DS integration
+# docs — copy them from there. Without these two lines Gradle skips the repo
+# and the Cardinal artifact will fail to resolve.
+cardinal.username=
+cardinal.password=

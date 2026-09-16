@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Ứng dụng này cần quyền truy cập vào camera để sử dụng tính năng quét mã QR hoặc mã vạch, có thể truy cập từ thanh tìm kiếm";
+"NSFaceIDUsageDescription" = "Ứng dụng này cần quyền truy cập vào Touch ID và Face ID để đăng nhập vào ứng dụng";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Ứng dụng này cần quyền truy cập vào vị trí của bạn để hiển thị trên màn hình bản đồ và cung cấp các dịch vụ dựa trên vị trí.";
+"NSLocationAlwaysUsageDescription" = "Ứng dụng này cần quyền truy cập vào vị trí của bạn để hiển thị trên màn hình bản đồ và cung cấp các dịch vụ dựa trên vị trí.";
+"NSLocationWhenInUseUsageDescription" = "Ứng dụng này cần quyền truy cập vào vị trí của bạn để hiển thị trên màn hình bản đồ và cung cấp các dịch vụ dựa trên vị trí.";
+"NSMicrophoneUsageDescription" = "Chúng tôi muốn được truy cập vào microphone để cho phép ghi tin nhắn thoại";
+"NSPhotoLibraryAddUsageDescription" = "Chúng tôi muốn được truy cập để lưu hình ảnh/video vào Thư viện ảnh của bạn";
+"NSPhotoLibraryUsageDescription" = "Ứng dụng này cần quyền truy cập vào thư viện ảnh của bạn để chọn ảnh dùng làm ảnh đại diện.";
+"NSSpeechRecognitionUsageDescription" = "Ứng dụng này cần quyền nhận dạng giọng nói";
+"NSUserTrackingUsageDescription" = "Định danh này sẽ được dùng để cung cấp quảng cáo được cá nhân hóa cho bạn. \"Không cho phép ứng dụng theo dõi\" sẽ hạn chế khả năng của mạng quảng cáo trong việc hiển thị các quảng cáo phù hợp với bạn, nhưng sẽ không làm giảm số lượng quảng cáo bạn nhận được.";

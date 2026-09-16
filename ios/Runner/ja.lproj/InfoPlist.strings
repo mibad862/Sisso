@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "このアプリでは、検索バーから利用できるQRコードまたはバーコードスキャナー機能のためにカメラへのアクセスが必要です";
+"NSFaceIDUsageDescription" = "このアプリにログインするために、Touch IDとFace IDへのアクセスが必要です";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "このアプリでは、地図画面に表示したり位置情報ベースのサービスを提供したりするために、位置情報へのアクセスが必要です。";
+"NSLocationAlwaysUsageDescription" = "このアプリでは、地図画面に表示したり位置情報ベースのサービスを提供したりするために、位置情報へのアクセスが必要です。";
+"NSLocationWhenInUseUsageDescription" = "このアプリでは、地図画面に表示したり位置情報ベースのサービスを提供したりするために、位置情報へのアクセスが必要です。";
+"NSMicrophoneUsageDescription" = "音声メッセージの録音を可能にするため、マイクへのアクセスを許可してください";
+"NSPhotoLibraryAddUsageDescription" = "写真ライブラリに画像/動画を保存するためにアクセスを許可してください";
+"NSPhotoLibraryUsageDescription" = "このアプリでは、プロフィール画像として使用する写真を選択するために、写真ライブラリへのアクセスが必要です。";
+"NSSpeechRecognitionUsageDescription" = "このアプリケーションでは音声認識の許可が必要です";
+"NSUserTrackingUsageDescription" = "この識別子は、あなたにパーソナライズされた広告を配信するために使用されます。「Appにトラッキングしないように要求」は、広告ネットワークが関連性の高い広告を配信する能力を制限しますが、表示される広告の数は減りません。";

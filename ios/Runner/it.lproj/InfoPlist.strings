@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Questa app richiede l'accesso alla fotocamera per la funzione di scansione di codici QR o codici a barre, accessibile dalla barra di ricerca";
+"NSFaceIDUsageDescription" = "Questa app richiede l'accesso a Touch ID e Face ID per accedere all'app";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Questa app ha bisogno di accedere alla tua posizione per mostrarla nella schermata della mappa e fornire servizi basati sulla posizione.";
+"NSLocationAlwaysUsageDescription" = "Questa app ha bisogno di accedere alla tua posizione per mostrarla nella schermata della mappa e fornire servizi basati sulla posizione.";
+"NSLocationWhenInUseUsageDescription" = "Questa app ha bisogno di accedere alla tua posizione per mostrarla nella schermata della mappa e fornire servizi basati sulla posizione.";
+"NSMicrophoneUsageDescription" = "Vorremmo accedere al microfono per consentire la registrazione di messaggi vocali";
+"NSPhotoLibraryAddUsageDescription" = "Vorremmo accedere per salvare immagini/video nella tua libreria foto";
+"NSPhotoLibraryUsageDescription" = "Questa app richiede l'accesso alla tua libreria foto per selezionare la foto da usare come immagine del profilo.";
+"NSSpeechRecognitionUsageDescription" = "Questa applicazione necessita dell'autorizzazione al riconoscimento vocale";
+"NSUserTrackingUsageDescription" = "Questo identificatore verrà utilizzato per mostrarti annunci personalizzati. \"Chiedi all'app di non tracciarti\" limiterà la capacità della rete pubblicitaria di mostrarti annunci pertinenti, ma non ridurrà il numero di annunci che ricevi.";

@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Kailangan ng app na ito ng access sa camera para sa feature na QR Code o Barcode scanner na maaaring ma-access mula sa search bar";
+"NSFaceIDUsageDescription" = "Kailangan ng app na ito ng access sa Touch ID at Face ID para makapag-log in sa app";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Kailangan ng app na ito ng access sa iyong lokasyon upang maipakita sa screen ng mapa at makapagbigay ng mga serbisyong batay sa lokasyon.";
+"NSLocationAlwaysUsageDescription" = "Kailangan ng app na ito ng access sa iyong lokasyon upang maipakita sa screen ng mapa at makapagbigay ng mga serbisyong batay sa lokasyon.";
+"NSLocationWhenInUseUsageDescription" = "Kailangan ng app na ito ng access sa iyong lokasyon upang maipakita sa screen ng mapa at makapagbigay ng mga serbisyong batay sa lokasyon.";
+"NSMicrophoneUsageDescription" = "Nais naming magkaroon ng access sa mikropono upang payagan ang pagre-record ng mga voice message";
+"NSPhotoLibraryAddUsageDescription" = "Nais naming magkaroon ng access upang mag-imbak ng mga larawan/video sa iyong Photo Library";
+"NSPhotoLibraryUsageDescription" = "Kailangan ng app na ito ng access sa iyong photo library upang piliin ang larawang gagamitin bilang iyong profile picture.";
+"NSSpeechRecognitionUsageDescription" = "Kailangan ng application na ito ang pahintulot sa speech recognition";
+"NSUserTrackingUsageDescription" = "Gagamitin ang identifier na ito upang maghatid sa iyo ng mga personalized na ad. Ang \"Ask App Not to track\" ay maglilimita sa kakayahan ng advertising network na maghatid ng mga angkop na ad sa iyo ngunit hindi nito babawasan ang bilang ng mga ad na matatanggap mo.";

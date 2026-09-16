@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Lolu hlelo lokusebenza ludinga ukufinyelela kukhamera ukuze kusebenze isici se-QR Code noma se-Barcode scanner esingafinyelelwa kubha yokusesha";
+"NSFaceIDUsageDescription" = "Lolu hlelo lokusebenza ludinga ukufinyelela ku-Touch ID ne-Face ID ukuze ungene kuhlelo lokusebenza";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Lolu hlelo lokusebenza ludinga ukufinyelela endaweni yakho ukuze kuboniswe esikrinini semephu futhi kunikezwe izinsizakalo ezisekelwe endaweni.";
+"NSLocationAlwaysUsageDescription" = "Lolu hlelo lokusebenza ludinga ukufinyelela endaweni yakho ukuze kuboniswe esikrinini semephu futhi kunikezwe izinsizakalo ezisekelwe endaweni.";
+"NSLocationWhenInUseUsageDescription" = "Lolu hlelo lokusebenza ludinga ukufinyelela endaweni yakho ukuze kuboniswe esikrinini semephu futhi kunikezwe izinsizakalo ezisekelwe endaweni.";
+"NSMicrophoneUsageDescription" = "Singathanda ukufinyelela kumakrofoni ukuze sivumele ukuqoshwa kwemilayezo yezwi";
+"NSPhotoLibraryAddUsageDescription" = "Singathanda ukufinyelela ukuze sigcine Izithombe/Amavidiyo ku-Photo Library yakho";
+"NSPhotoLibraryUsageDescription" = "Lolu hlelo lokusebenza ludinga ukufinyelela ku-photo library yakho ukuze ukhethe isithombe ozosisebenzisa njengesithombe sakho sephrofayela.";
+"NSSpeechRecognitionUsageDescription" = "Lolu hlelo lokusebenza ludinga imvume yokubonwa kwenkulumo";
+"NSUserTrackingUsageDescription" = "Lesi sikhombi sizosetshenziswa ukuletha izikhangiso ezenzelwe wena. \"Ask App Not to track\" izokhawulela ikhono lenethiwekhi yezikhangiso lokuletha izikhangiso ezifanele kuwe kodwa ngeke yehlise inani lezikhangiso ozitholayo.";

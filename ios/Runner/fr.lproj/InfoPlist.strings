@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Cette application nécessite l’accès à la caméra pour la fonctionnalité de scanner de QR code ou de code-barres, accessible depuis la barre de recherche";
+"NSFaceIDUsageDescription" = "Cette application nécessite l’accès à Touch ID et Face ID pour se connecter à l’application";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Cette application a besoin d’accéder à votre position pour l’afficher sur l’écran de la carte et fournir des services basés sur la localisation.";
+"NSLocationAlwaysUsageDescription" = "Cette application a besoin d’accéder à votre position pour l’afficher sur l’écran de la carte et fournir des services basés sur la localisation.";
+"NSLocationWhenInUseUsageDescription" = "Cette application a besoin d’accéder à votre position pour l’afficher sur l’écran de la carte et fournir des services basés sur la localisation.";
+"NSMicrophoneUsageDescription" = "Nous aimerions accéder au microphone pour permettre l’enregistrement de messages vocaux";
+"NSPhotoLibraryAddUsageDescription" = "Nous aimerions accéder à votre photothèque pour y enregistrer des images/vidéos";
+"NSPhotoLibraryUsageDescription" = "Cette application nécessite l’accès à votre photothèque pour sélectionner la photo à utiliser comme photo de profil.";
+"NSSpeechRecognitionUsageDescription" = "Cette application a besoin de l’autorisation de reconnaissance vocale";
+"NSUserTrackingUsageDescription" = "Cet identifiant sera utilisé pour vous proposer des publicités personnalisées. « Ne pas autoriser le suivi » limitera la capacité des réseaux publicitaires à vous proposer des publicités pertinentes, mais ne réduira pas le nombre de publicités que vous recevez.";

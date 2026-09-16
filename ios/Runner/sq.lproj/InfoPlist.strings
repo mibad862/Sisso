@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Ky aplikacion kërkon qasje te kamera për funksionin e skanimit të QR Code ose Barcode, i cili mund të aksesohet nga shiriti i kërkimit";
+"NSFaceIDUsageDescription" = "Ky aplikacion kërkon qasje te Touch ID dhe Face ID për t'u identifikuar në aplikacion";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Ky aplikacion ka nevojë për qasje te vendndodhja juaj për t'u shfaqur në ekranin e hartës dhe për të ofruar shërbime të bazuara në vendndodhje.";
+"NSLocationAlwaysUsageDescription" = "Ky aplikacion ka nevojë për qasje te vendndodhja juaj për t'u shfaqur në ekranin e hartës dhe për të ofruar shërbime të bazuara në vendndodhje.";
+"NSLocationWhenInUseUsageDescription" = "Ky aplikacion ka nevojë për qasje te vendndodhja juaj për t'u shfaqur në ekranin e hartës dhe për të ofruar shërbime të bazuara në vendndodhje.";
+"NSMicrophoneUsageDescription" = "Do të dëshironim qasje te mikrofoni për të lejuar regjistrimin e mesazheve zanore";
+"NSPhotoLibraryAddUsageDescription" = "Do të dëshironim qasje për të ruajtur imazhe/video në Photo Library tuaj";
+"NSPhotoLibraryUsageDescription" = "Ky aplikacion kërkon qasje te biblioteka juaj e fotove për të zgjedhur foton që do të përdoret si fotografia juaj e profilit.";
+"NSSpeechRecognitionUsageDescription" = "Ky aplikacion ka nevojë për lejen e njohjes së të folurit";
+"NSUserTrackingUsageDescription" = "Ky identifikues do të përdoret për t'ju ofruar reklama të personalizuara. \"Mos e gjurmo aplikacionin\" do të kufizojë aftësinë e rrjetit të reklamave për t'ju ofruar reklama të përshtatshme, por nuk do të zvogëlojë numrin e reklamave që merrni.";

@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Þetta forrit þarf aðgang að myndavélinni fyrir QR-kóða- eða strikamerkjaskönnun, sem hægt er að nálgast úr leitarstikunni";
+"NSFaceIDUsageDescription" = "Þetta forrit þarf aðgang að Touch ID og Face ID til að skrá þig inn í forritið";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Þetta forrit þarf aðgang að staðsetningu þinni til að sýna hana á kortaskjánum og veita staðsetningartengda þjónustu.";
+"NSLocationAlwaysUsageDescription" = "Þetta forrit þarf aðgang að staðsetningu þinni til að sýna hana á kortaskjánum og veita staðsetningartengda þjónustu.";
+"NSLocationWhenInUseUsageDescription" = "Þetta forrit þarf aðgang að staðsetningu þinni til að sýna hana á kortaskjánum og veita staðsetningartengda þjónustu.";
+"NSMicrophoneUsageDescription" = "Við viljum fá aðgang að hljóðnemanum til að leyfa upptöku raddskilaboða";
+"NSPhotoLibraryAddUsageDescription" = "Við viljum fá aðgang til að geyma myndir/myndbönd í Myndasafninu þínu";
+"NSPhotoLibraryUsageDescription" = "Þetta forrit þarf aðgang að myndasafninu þínu til að velja mynd sem nota á sem prófílmynd.";
+"NSSpeechRecognitionUsageDescription" = "Þetta forrit þarf leyfi fyrir talgreiningu";
+"NSUserTrackingUsageDescription" = "Þessi auðkenni verður notað til að birta þér sérsniðnar auglýsingar. „Ekki rekja í forriti“ mun takmarka getu auglýsinganeta til að birta þér viðeigandi auglýsingar en mun ekki fækka auglýsingum sem þú færð.";

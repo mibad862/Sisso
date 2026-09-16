@@ -1,0 +1,103 @@
+import 'package:flux_ui/flux_ui.dart';
+
+enum TestimonialType { chat, card, modern, minimal, gradient, quote, glass }
+
+class TestimonialConfig {
+  String? avatar;
+  String? name;
+  String? major;
+  num? rating;
+  TestimonialType type = TestimonialType.card;
+  String? textColor;
+  String? backgroundColor;
+  String? accentColor;
+  bool isLeft = true;
+  bool authorInTop = false;
+  String testimonial = '';
+  num borderRadius = 5;
+  num marginLeft = 0;
+  num marginRight = 0;
+  num marginTop = 0;
+  num marginBottom = 0;
+  num borderWidth = 0;
+  BoxShadowConfig? boxShadowConfig;
+  bool? enableBackground;
+  bool showQuoteIcon = true;
+
+  TestimonialConfig({
+    this.avatar,
+    this.name,
+    this.major,
+    this.rating,
+    this.type = TestimonialType.card,
+    this.textColor,
+    this.backgroundColor,
+    this.accentColor,
+    this.isLeft = true,
+    this.authorInTop = false,
+    this.testimonial = '',
+    this.borderRadius = 5,
+    this.marginLeft = 0,
+    this.marginRight = 0,
+    this.marginTop = 0,
+    this.marginBottom = 0,
+    this.borderWidth = 0,
+    this.boxShadowConfig,
+    this.enableBackground,
+    this.showQuoteIcon = true,
+  });
+
+  TestimonialConfig.fromJson(dynamic json) {
+    avatar = json['avatar'];
+    name = json['name'];
+    major = json['major'];
+    rating = json['rating'];
+    type = TestimonialType.values.firstWhere(
+      (element) => element.toString().split('.').last == json['type'],
+      orElse: () => TestimonialType.card,
+    );
+    textColor = json['textColor'];
+    backgroundColor = json['backgroundColor'];
+    accentColor = json['accentColor'];
+    isLeft = json['isLeft'] ?? true;
+    authorInTop = json['authorInTop'] ?? false;
+    testimonial = json['testimonial'] ?? '';
+    borderRadius = json['borderRadius'] ?? 5;
+    marginLeft = json['marginLeft'] ?? 0;
+    marginRight = json['marginRight'] ?? 0;
+    marginTop = json['marginTop'] ?? 0;
+    marginBottom = json['marginBottom'] ?? 0;
+    borderWidth = json['borderWidth'] ?? 0;
+    if (json['boxShadow'] != null) {
+      boxShadowConfig = BoxShadowConfig.fromJson(json['boxShadow']);
+    }
+    enableBackground = json['enableBackground'];
+    showQuoteIcon = json['showQuoteIcon'] ?? true;
+  }
+
+  Map<String, dynamic> toJson() {
+    var map = <String, dynamic>{};
+    map['avatar'] = avatar;
+    map['name'] = name;
+    map['major'] = major;
+    map['rating'] = rating;
+    map['type'] = type.toString().split('.').last;
+    map['textColor'] = textColor;
+    map['backgroundColor'] = backgroundColor;
+    map['accentColor'] = accentColor;
+    map['isLeft'] = isLeft;
+    map['authorInTop'] = authorInTop;
+    map['testimonial'] = testimonial;
+    map['borderRadius'] = borderRadius;
+    map['marginLeft'] = marginLeft;
+    map['marginRight'] = marginRight;
+    map['marginTop'] = marginTop;
+    map['marginBottom'] = marginBottom;
+    map['borderWidth'] = borderWidth;
+    map['boxShadow'] = boxShadowConfig?.toJson();
+    map['enableBackground'] = enableBackground;
+    map['showQuoteIcon'] = showQuoteIcon;
+    map.removeWhere((key, value) => value == null);
+    return map;
+  }
+}

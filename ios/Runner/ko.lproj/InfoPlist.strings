@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "이 앱은 검색창에서 사용할 수 있는 QR 코드 또는 바코드 스캐너 기능을 위해 카메라 접근 권한이 필요합니다.";
+"NSFaceIDUsageDescription" = "이 앱에 로그인하기 위해 Touch ID 및 Face ID 접근 권한이 필요합니다.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "이 앱은 지도 화면에 표시하고 위치 기반 서비스를 제공하기 위해 사용자의 위치 접근 권한이 필요합니다.";
+"NSLocationAlwaysUsageDescription" = "이 앱은 지도 화면에 표시하고 위치 기반 서비스를 제공하기 위해 사용자의 위치 접근 권한이 필요합니다.";
+"NSLocationWhenInUseUsageDescription" = "이 앱은 지도 화면에 표시하고 위치 기반 서비스를 제공하기 위해 사용자의 위치 접근 권한이 필요합니다.";
+"NSMicrophoneUsageDescription" = "음성 메시지 녹음을 허용하기 위해 마이크 접근 권한이 필요합니다.";
+"NSPhotoLibraryAddUsageDescription" = "사진/동영상을 사진 보관함에 저장할 수 있도록 접근 권한이 필요합니다.";
+"NSPhotoLibraryUsageDescription" = "프로필 사진으로 사용할 사진을 선택하기 위해 사진 보관함 접근 권한이 필요합니다.";
+"NSSpeechRecognitionUsageDescription" = "이 앱은 음성 인식 권한이 필요합니다.";
+"NSUserTrackingUsageDescription" = "이 식별자는 맞춤형 광고를 제공하는 데 사용됩니다. \"앱이 추적하지 않도록 요청\"을 선택하면 광고 네트워크가 관련성 높은 광고를 제공하는 능력이 제한되지만, 표시되는 광고 수는 줄어들지 않습니다.";

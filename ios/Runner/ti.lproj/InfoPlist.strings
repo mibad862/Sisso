@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "እዚ መተግበሪ ን QR Code ወይ Barcode ስካነር ባህሪ፣ ካብ መስኮት ምድላይ ክትከፍት ዝኽእል፣ ናብ ካሜራ መዳረሻ ይሓትት";
+"NSFaceIDUsageDescription" = "እዚ መተግበሪ ንመእተዊ ኣብ መተግበሪ ን Touch ID እና Face ID መዳረሻ ይሓትት";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "እዚ መተግበሪ ኣብ ካርታ ስክሪን ንምርኣይ እና ከከም ቦታ ዝተመርኮሰ ኣገልግሎታት ንምቕራብ ናብ ቦታኻ መዳረሻ ይደሊ።";
+"NSLocationAlwaysUsageDescription" = "እዚ መተግበሪ ኣብ ካርታ ስክሪን ንምርኣይ እና ከከም ቦታ ዝተመርኮሰ ኣገልግሎታት ንምቕራብ ናብ ቦታኻ መዳረሻ ይደሊ።";
+"NSLocationWhenInUseUsageDescription" = "እዚ መተግበሪ ኣብ ካርታ ስክሪን ንምርኣይ እና ከከም ቦታ ዝተመርኮሰ ኣገልግሎታት ንምቕራብ ናብ ቦታኻ መዳረሻ ይደሊ።";
+"NSMicrophoneUsageDescription" = "ድምጺ መልእኽታት ንምቕራጽ ናብ ማይክሮፎን መዳረሻ ክንረክብ ንደሊ";
+"NSPhotoLibraryAddUsageDescription" = "ስእሊ/ቪድዮታት ኣብ ፎቶ ላይብረሪኻ ንምዕቃብ መዳረሻ ክንረክብ ንደሊ";
+"NSPhotoLibraryUsageDescription" = "እዚ መተግበሪ ንፕሮፋይል ስእልኻ ክትጥቀመሉ ዝኽእል ስእሊ ንምምራጽ ናብ ፎቶ ላይብረሪኻ መዳረሻ ይሓትት";
+"NSSpeechRecognitionUsageDescription" = "እዚ መተግበሪ ፍቓድ ናይ ድምጺ ምልላይ ይደሊ";
+"NSUserTrackingUsageDescription" = "እዚ መለለዪ ንዓኻ ዝተመሓየሸ ማስታወቂያታት ንምቕራብ ክጥቀመሉ እዩ። \"Ask App Not to track\" ንናይ ማስታወቂያ መርበብ ንዓኻ ተዛማዲ ማስታወቂያታት ንምቕራብ ዘለዎ ብቕዓት ይገድብ፣ እንተኾነ ግን ዝቕበሎ ማስታወቂያታት ብዝሒ ኣይንክይን።";

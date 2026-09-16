@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "આ એપને QR કોડ અથવા બારકોડ સ્કેનર સુવિધા માટે કેમેરાની ઍક્સેસ જરૂરી છે, જે શોધ બારમાંથી ઍક્સેસ કરી શકાય છે";
+"NSFaceIDUsageDescription" = "આ એપમાં લૉગિન કરવા માટે Touch ID અને Face ID ની ઍક્સેસ જરૂરી છે";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "આ એપને નકશા સ્ક્રીન પર બતાવવા અને સ્થાન આધારિત સેવાઓ આપવા માટે તમારા સ્થાનની ઍક્સેસ જરૂરી છે.";
+"NSLocationAlwaysUsageDescription" = "આ એપને નકશા સ્ક્રીન પર બતાવવા અને સ્થાન આધારિત સેવાઓ આપવા માટે તમારા સ્થાનની ઍક્સેસ જરૂરી છે.";
+"NSLocationWhenInUseUsageDescription" = "આ એપને નકશા સ્ક્રીન પર બતાવવા અને સ્થાન આધારિત સેવાઓ આપવા માટે તમારા સ્થાનની ઍક્સેસ જરૂરી છે.";
+"NSMicrophoneUsageDescription" = "અમે વૉઇસ સંદેશાઓ રેકોર્ડ કરવાની મંજૂરી આપવા માટે માઇક્રોફોનની ઍક્સેસ ઇચ્છીએ છીએ";
+"NSPhotoLibraryAddUsageDescription" = "અમે તમારા Photo Library માં છબીઓ/વિડિઓઝ સંગ્રહવા માટે ઍક્સેસ ઇચ્છીએ છીએ";
+"NSPhotoLibraryUsageDescription" = "આ એપને પ્રોફાઇલ તસવીર તરીકે ઉપયોગ કરવા માટે ફોટો પસંદ કરવા તમારી ફોટો લાઇબ્રેરીની ઍક્સેસ જરૂરી છે.";
+"NSSpeechRecognitionUsageDescription" = "આ એપ્લિકેશનને speech recognition પરવાનગીની જરૂર છે";
+"NSUserTrackingUsageDescription" = "આ ઓળખકર્તાનો ઉપયોગ તમને વ્યક્તિગત જાહેરાતો પહોંચાડવા માટે કરવામાં આવશે. \"Ask App Not to track\" જાહેરાત નેટવર્કની તમને સંબંધિત જાહેરાતો પહોંચાડવાની ક્ષમતાને મર્યાદિત કરશે, પરંતુ તમને મળતી જાહેરાતોની સંખ્યા ઘટાડશે નહીં.";

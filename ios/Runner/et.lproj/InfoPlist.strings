@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "See rakendus vajab juurdepääsu kaamerale QR-koodi või vöötkoodi skanneri funktsiooni jaoks, millele pääseb ligi otsinguriba kaudu";
+"NSFaceIDUsageDescription" = "See rakendus vajab sisselogimiseks juurdepääsu Touch ID-le ja Face ID-le";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "See rakendus vajab juurdepääsu teie asukohale, et seda kaardivaates kuvada ja pakkuda asukohapõhiseid teenuseid.";
+"NSLocationAlwaysUsageDescription" = "See rakendus vajab juurdepääsu teie asukohale, et seda kaardivaates kuvada ja pakkuda asukohapõhiseid teenuseid.";
+"NSLocationWhenInUseUsageDescription" = "See rakendus vajab juurdepääsu teie asukohale, et seda kaardivaates kuvada ja pakkuda asukohapõhiseid teenuseid.";
+"NSMicrophoneUsageDescription" = "Soovime juurdepääsu mikrofonile, et võimaldada häälteadete salvestamist";
+"NSPhotoLibraryAddUsageDescription" = "Soovime juurdepääsu piltide/videote salvestamiseks teie fototeeki";
+"NSPhotoLibraryUsageDescription" = "See rakendus vajab juurdepääsu teie fototeegile, et valida foto, mida kasutada teie profiilipildina.";
+"NSSpeechRecognitionUsageDescription" = "See rakendus vajab kõnetuvastuse luba";
+"NSUserTrackingUsageDescription" = "Seda identifikaatorit kasutatakse teile isikupärastatud reklaamide edastamiseks. Valik „Ära luba rakendusel jälgida” piirab reklaamivõrgustiku võimalust edastada teile asjakohaseid reklaame, kuid ei vähenda teile kuvatavate reklaamide arvu.";

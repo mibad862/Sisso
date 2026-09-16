@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Programu hii inahitaji ufikiaji wa kamera kwa kipengele cha skana ya QR Code au Barcode ambacho kinaweza kufikiwa kutoka kwenye upau wa utafutaji";
+"NSFaceIDUsageDescription" = "Programu hii inahitaji ufikiaji wa Touch ID na Face ID ili kuingia kwenye programu";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Programu hii inahitaji ufikiaji wa eneo lako ili kuonyesha kwenye skrini ya ramani na kutoa huduma zinazotegemea eneo.";
+"NSLocationAlwaysUsageDescription" = "Programu hii inahitaji ufikiaji wa eneo lako ili kuonyesha kwenye skrini ya ramani na kutoa huduma zinazotegemea eneo.";
+"NSLocationWhenInUseUsageDescription" = "Programu hii inahitaji ufikiaji wa eneo lako ili kuonyesha kwenye skrini ya ramani na kutoa huduma zinazotegemea eneo.";
+"NSMicrophoneUsageDescription" = "Tungependa kupata ufikiaji wa maikrofoni ili kuruhusu kurekodi ujumbe wa sauti";
+"NSPhotoLibraryAddUsageDescription" = "Tungependa kupata ufikiaji wa kuhifadhi Picha/Video katika Maktaba yako ya Picha";
+"NSPhotoLibraryUsageDescription" = "Programu hii inahitaji ufikiaji wa maktaba yako ya picha ili kuchagua picha itakayotumika kama picha yako ya wasifu.";
+"NSSpeechRecognitionUsageDescription" = "Programu hii inahitaji ruhusa ya utambuzi wa sauti";
+"NSUserTrackingUsageDescription" = "Kitambulisho hiki kitatumika kukuletea matangazo yaliyobinafsishwa. \"Usiruhusu App ifuatilie\" kitapunguza uwezo wa mtandao wa matangazo kukuletea matangazo yanayofaa, lakini hakitapunguza idadi ya matangazo utakayopokea.";

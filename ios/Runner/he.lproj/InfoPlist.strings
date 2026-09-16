@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "האפליקציה הזו דורשת גישה למצלמה עבור תכונת סורק קוד QR או ברקוד, שניתן לגשת אליה מסרגל החיפוש";
+"NSFaceIDUsageDescription" = "האפליקציה הזו דורשת גישה ל-Touch ID ול-Face ID כדי להתחבר לאפליקציה";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "האפליקציה הזו זקוקה לגישה למיקום שלך כדי להציג אותו במסך המפה ולספק שירותים מבוססי מיקום.";
+"NSLocationAlwaysUsageDescription" = "האפליקציה הזו זקוקה לגישה למיקום שלך כדי להציג אותו במסך המפה ולספק שירותים מבוססי מיקום.";
+"NSLocationWhenInUseUsageDescription" = "האפליקציה הזו זקוקה לגישה למיקום שלך כדי להציג אותו במסך המפה ולספק שירותים מבוססי מיקום.";
+"NSMicrophoneUsageDescription" = "נשמח לקבל גישה למיקרופון כדי לאפשר הקלטת הודעות קוליות";
+"NSPhotoLibraryAddUsageDescription" = "נשמח לקבל גישה כדי לשמור תמונות/סרטונים בספריית התמונות שלך";
+"NSPhotoLibraryUsageDescription" = "האפליקציה הזו דורשת גישה לספריית התמונות שלך כדי לבחור את התמונה שתשמש כתמונת הפרופיל שלך.";
+"NSSpeechRecognitionUsageDescription" = "יישום זה זקוק להרשאה לזיהוי דיבור";
+"NSUserTrackingUsageDescription" = "מזהה זה ישמש להצגת מודעות מותאמות אישית עבורך. \"אל תעקוב אחרי\" יגביל את יכולתה של רשת הפרסום להציג לך מודעות רלוונטיות, אך לא יפחית את מספר המודעות שתקבל.";

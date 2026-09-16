@@ -1,0 +1,30 @@
+part of '../config.dart';
+
+/// Everything Config about the Product Setting
+
+Map get kProductVariantLayout => Configurations.productVariantLayout;
+
+ProductDetailConfig get kProductDetail =>
+    ProductDetailConfig.fromJson(Configurations.productDetail);
+
+FilterConfig get kFilterConfig => Configurations.filterConfig;
+
+Map get kProductAddons => Configurations.productAddons;
+
+CartDetail get kCartDetail => Configurations.cartDetail;
+
+Map get kProductVariantLanguage => Configurations.productVariantLanguage;
+
+String? get kExcludedCategoryIDs => Configurations.excludedCategoryIDs;
+
+String? get kExcludedProductIDs => Configurations.excludedProductIDs;
+
+SaleoffProductConfig get kSaleOffProduct =>
+    SaleoffProductConfig.fromJson(Configurations.saleOffProduct);
+
+bool get kNotStrictVisibleVariant => Configurations.notStrictVisibleVariant;
+
+ProductCardConfig get kProductCard =>
+    ProductCardConfig.fromJson(Configurations.productCard);
+
+BoxFit get kCardFit => ImageTools.boxFit(kProductCard.boxFit);

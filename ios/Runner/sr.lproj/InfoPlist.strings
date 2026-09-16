@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Ova aplikacija zahteva pristup kameri za funkciju skenera QR koda ili bar koda, kojoj se može pristupiti iz trake za pretragu";
+"NSFaceIDUsageDescription" = "Ova aplikacija zahteva pristup Touch ID i Face ID za prijavljivanje u aplikaciju";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Ova aplikacija treba pristup vašoj lokaciji kako bi prikazivala mapu i pružala usluge zasnovane na lokaciji.";
+"NSLocationAlwaysUsageDescription" = "Ova aplikacija treba pristup vašoj lokaciji kako bi prikazivala mapu i pružala usluge zasnovane na lokaciji.";
+"NSLocationWhenInUseUsageDescription" = "Ova aplikacija treba pristup vašoj lokaciji kako bi prikazivala mapu i pružala usluge zasnovane na lokaciji.";
+"NSMicrophoneUsageDescription" = "Želeli bismo pristup mikrofonu kako bismo omogućili snimanje glasovnih poruka";
+"NSPhotoLibraryAddUsageDescription" = "Želeli bismo pristup za čuvanje slika/video zapisa u vašu Foto biblioteku";
+"NSPhotoLibraryUsageDescription" = "Ova aplikacija zahteva pristup vašoj foto biblioteci kako biste izabrali fotografiju za profilnu sliku.";
+"NSSpeechRecognitionUsageDescription" = "Ovoj aplikaciji je potrebna dozvola za prepoznavanje govora";
+"NSUserTrackingUsageDescription" = "Ovaj identifikator će se koristiti za prikazivanje personalizovanih oglasa. Opcija „Zatraži od aplikacije da ne prati“ ograničiće mogućnost oglasne mreže da prikazuje relevantne oglase, ali neće smanjiti broj oglasa koje dobijate.";

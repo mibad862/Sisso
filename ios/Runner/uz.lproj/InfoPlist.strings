@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Ushbu ilova QR kod yoki shtrix-kod skaneri funksiyasi uchun kameraga kirish huquqini talab qiladi, bu funksiyaga qidiruv satridan kirish mumkin";
+"NSFaceIDUsageDescription" = "Ushbu ilova tizimga kirish uchun Touch ID va Face ID ga kirish huquqini talab qiladi";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Ushbu ilova xarita ekranida ko‘rsatish va joylashuvga asoslangan xizmatlarni taqdim etish uchun joylashuvingizga kirish huquqini talab qiladi.";
+"NSLocationAlwaysUsageDescription" = "Ushbu ilova xarita ekranida ko‘rsatish va joylashuvga asoslangan xizmatlarni taqdim etish uchun joylashuvingizga kirish huquqini talab qiladi.";
+"NSLocationWhenInUseUsageDescription" = "Ushbu ilova xarita ekranida ko‘rsatish va joylashuvga asoslangan xizmatlarni taqdim etish uchun joylashuvingizga kirish huquqini talab qiladi.";
+"NSMicrophoneUsageDescription" = "Bizga ovozli xabarlarni yozib olish imkonini berish uchun mikrofonga kirish huquqini berishingizni so‘raymiz";
+"NSPhotoLibraryAddUsageDescription" = "Rasm/video fayllarni Foto kutubxonangizda saqlash uchun kirish huquqini berishingizni so‘raymiz";
+"NSPhotoLibraryUsageDescription" = "Ushbu ilova profil rasmingiz sifatida ishlatish uchun suratni tanlash maqsadida foto kutubxonangizga kirish huquqini talab qiladi.";
+"NSSpeechRecognitionUsageDescription" = "Ushbu ilova nutqni tanib olish ruxsatiga muhtoj";
+"NSUserTrackingUsageDescription" = "Bu identifikator sizga shaxsiylashtirilgan reklamalarni ko‘rsatish uchun ishlatiladi. \"Ilovadan kuzatmaslikni so‘rash\" reklama tarmog‘ining sizga mos reklamalarni ko‘rsatish imkoniyatini cheklaydi, ammo siz oladigan reklamalar sonini kamaytirmaydi.";

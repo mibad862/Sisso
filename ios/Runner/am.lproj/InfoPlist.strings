@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "ይህ መተግበሪያ ከፍለጋ አሞሌው ሊደረስበት የሚችል የQR ኮድ ወይም የባርኮድ ስካነር ባህሪ ለመጠቀም የካሜራ መዳረሻ ይፈልጋል";
+"NSFaceIDUsageDescription" = "ይህ መተግበሪያ ለመግባት የTouch ID እና Face ID መዳረሻ ይፈልጋል";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "ይህ መተግበሪያ በካርታ ማያ ላይ ለማሳየት እና በአካባቢ ላይ የተመሰረቱ አገልግሎቶችን ለመስጠት የእርስዎን አካባቢ መዳረሻ ይፈልጋል።";
+"NSLocationAlwaysUsageDescription" = "ይህ መተግበሪያ በካርታ ማያ ላይ ለማሳየት እና በአካባቢ ላይ የተመሰረቱ አገልግሎቶችን ለመስጠት የእርስዎን አካባቢ መዳረሻ ይፈልጋል።";
+"NSLocationWhenInUseUsageDescription" = "ይህ መተግበሪያ በካርታ ማያ ላይ ለማሳየት እና በአካባቢ ላይ የተመሰረቱ አገልግሎቶችን ለመስጠት የእርስዎን አካባቢ መዳረሻ ይፈልጋል።";
+"NSMicrophoneUsageDescription" = "የድምፅ መልዕክቶችን መቅረጽ እንዲቻል የማይክሮፎን መዳረሻ እንፈልጋለን";
+"NSPhotoLibraryAddUsageDescription" = "ምስሎችን/ቪዲዮዎችን በፎቶ ቤተ-መዝገብዎ ውስጥ ለማከማቸት መዳረሻ እንፈልጋለን";
+"NSPhotoLibraryUsageDescription" = "ይህ መተግበሪያ እንደ መገለጫ ምስልዎ ለመጠቀም ፎቶ ለመምረጥ የፎቶ ቤተ-መዝገብዎ መዳረሻ ይፈልጋል።";
+"NSSpeechRecognitionUsageDescription" = "ይህ መተግበሪያ የድምፅ እውቅና ፈቃድ ይፈልጋል";
+"NSUserTrackingUsageDescription" = "ይህ መለያ ለእርስዎ ግላዊ የተደረጉ ማስታወቂያዎችን ለማቅረብ ይጠቀማል። \"መተግበሪያው እንዳይከታተል ጠይቅ\" የማስታወቂያ አውታረ መረብ ተዛማጅ ማስታወቂያዎችን የማቅረብ ችሎታን ይገድባል፣ ነገር ግን የሚቀበሏቸውን ማስታወቂያዎች ብዛት አይቀንስም።";

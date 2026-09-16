@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Bu tətbiq QR Kod və ya Barkod skaneri funksiyası üçün kameraya giriş tələb edir; bu funksiyaya axtarış sətrindən daxil olmaq olar";
+"NSFaceIDUsageDescription" = "Bu tətbiqə daxil olmaq üçün Touch ID və Face ID-yə giriş tələb olunur";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Bu tətbiq xəritə ekranında göstərmək və məkana əsaslanan xidmətlər təqdim etmək üçün yerləşmə məlumatınıza giriş tələb edir.";
+"NSLocationAlwaysUsageDescription" = "Bu tətbiq xəritə ekranında göstərmək və məkana əsaslanan xidmətlər təqdim etmək üçün yerləşmə məlumatınıza giriş tələb edir.";
+"NSLocationWhenInUseUsageDescription" = "Bu tətbiq xəritə ekranında göstərmək və məkana əsaslanan xidmətlər təqdim etmək üçün yerləşmə məlumatınıza giriş tələb edir.";
+"NSMicrophoneUsageDescription" = "Səsli mesajları yazmağa imkan vermək üçün mikrofona giriş istəyirik";
+"NSPhotoLibraryAddUsageDescription" = "Şəkil/Videoları Foto Kitabxananızda saxlamaq üçün giriş istəyirik";
+"NSPhotoLibraryUsageDescription" = "Bu tətbiq profil şəkliniz kimi istifadə etmək üçün foto seçmək məqsədilə foto kitabxananıza giriş tələb edir.";
+"NSSpeechRecognitionUsageDescription" = "Bu tətbiq səs tanıma icazəsi tələb edir";
+"NSUserTrackingUsageDescription" = "Bu identifikator sizə fərdiləşdirilmiş reklamlar təqdim etmək üçün istifadə olunacaq. \"Tətbiqdən izləməməyi xahiş et\" seçimi reklam şəbəkəsinin sizə uyğun reklamlar təqdim etmə imkanını məhdudlaşdıracaq, lakin aldığınız reklamların sayını azaltmayacaq.";

@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Această aplicație necesită acces la cameră pentru funcția de scanare cod QR sau cod de bare, care poate fi accesată din bara de căutare";
+"NSFaceIDUsageDescription" = "Această aplicație necesită acces la Touch ID și Face ID pentru autentificare în aplicație";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Această aplicație are nevoie de acces la locația dvs. pentru a o afișa pe ecranul hărții și pentru a oferi servicii bazate pe locație.";
+"NSLocationAlwaysUsageDescription" = "Această aplicație are nevoie de acces la locația dvs. pentru a o afișa pe ecranul hărții și pentru a oferi servicii bazate pe locație.";
+"NSLocationWhenInUseUsageDescription" = "Această aplicație are nevoie de acces la locația dvs. pentru a o afișa pe ecranul hărții și pentru a oferi servicii bazate pe locație.";
+"NSMicrophoneUsageDescription" = "Am dori acces la microfon pentru a permite înregistrarea mesajelor vocale";
+"NSPhotoLibraryAddUsageDescription" = "Am dori acces pentru a salva imagini/videoclipuri în Fototeca dvs.";
+"NSPhotoLibraryUsageDescription" = "Această aplicație necesită acces la fototeca dvs. pentru a selecta fotografia pe care să o folosească drept poză de profil.";
+"NSSpeechRecognitionUsageDescription" = "Această aplicație are nevoie de permisiunea de recunoaștere vocală";
+"NSUserTrackingUsageDescription" = "Acest identificator va fi folosit pentru a vă afișa reclame personalizate. „Nu permite aplicației să urmărească” va limita capacitatea rețelelor de publicitate de a afișa reclame relevante, dar nu va reduce numărul de reclame pe care le primiți.";

@@ -1,0 +1,10 @@
+Product : FluxStore Multi Vendor
+Package : FluxStore 6.3.0 (Regular license)
+Branch  : release-6.x/v6.3.0/vendor
+Commit  : 044ec626730e7921bb13b2489541b3e7ebfc9700
+Built   : 2026-07-29 08:30:49 UTC
+
+Design files
+------------
+The Figma source is delivered separately so this package stays small:
+https://support.inspireui.com/

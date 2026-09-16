@@ -1,0 +1,10 @@
+"NSCameraUsageDescription" = "Denne app kræver adgang til kameraet for QR-kode- eller stregkodescannerfunktionen, som kan tilgås fra søgefeltet";
+"NSFaceIDUsageDescription" = "Denne app kræver adgang til Touch ID og Face ID for at logge ind i appen";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Denne app har brug for adgang til din placering for at vise den på kortskærmen og levere placeringsbaserede tjenester.";
+"NSLocationAlwaysUsageDescription" = "Denne app har brug for adgang til din placering for at vise den på kortskærmen og levere placeringsbaserede tjenester.";
+"NSLocationWhenInUseUsageDescription" = "Denne app har brug for adgang til din placering for at vise den på kortskærmen og levere placeringsbaserede tjenester.";
+"NSMicrophoneUsageDescription" = "Vi vil gerne have adgang til mikrofonen for at kunne optage talebeskeder";
+"NSPhotoLibraryAddUsageDescription" = "Vi vil gerne have adgang til at gemme billeder/videoer i dit fotobibliotek";
+"NSPhotoLibraryUsageDescription" = "Denne app kræver adgang til dit fotobibliotek for at vælge det foto, der skal bruges som dit profilbillede.";
+"NSSpeechRecognitionUsageDescription" = "Denne app har brug for tilladelse til talegenkendelse";
+"NSUserTrackingUsageDescription" = "Denne identifikator vil blive brugt til at levere personlige annoncer til dig. \"Bed appen om ikke at spore\" vil begrænse annoncenetværkets mulighed for at levere relevante annoncer til dig, men vil ikke reducere antallet af annoncer, du modtager.";
