@@ -510,6 +510,18 @@ abstract class BaseServices {
     String date,
   ) => null;
 
+  /// Returns the set of dates (formatted `yyyy-MM-dd`) between [minDate] and
+  /// [maxDate] that have at least one free appointment slot.
+  ///
+  /// Returning `null` means the platform cannot report availability, in which
+  /// case no day is greyed out.
+  Future<Set<String>>? getAvailableBookingDates(
+    String? idProduct, {
+    String? idStaff,
+    required DateTime minDate,
+    required DateTime maxDate,
+  }) => null;
+
   /// {@macro fluxstore.blog_service.warning_override}
   @nonVirtual
   Future<PagingResponse<Blog>>? getBlogs(dynamic cursor) =>

@@ -2632,6 +2632,61 @@ class WooCommerceService extends BaseServices {
   }
 
   @override
+  Future<Set<String>> getAvailableBookingDates(
+    String? idProduct, {
+    String? idStaff,
+    required DateTime minDate,
+    required DateTime maxDate,
+  }) async {
+    String pad(int value) => value.toString().padLeft(2, '0');
+    String format(DateTime date) =>
+        '${date.year}-${pad(date.month)}-${pad(date.day)}';
+
+    try {
+      var urlAPI =
+          '$domain/wp-json/wc-appointments/v1/slots'
+          '?product_ids=$idProduct'
+          '&min_date=${format(minDate)}'
+          '&max_date=${format(maxDate)}';
+
+      if ((idStaff?.isNotEmpty ?? false) && idStaff != 'null') {
+        urlAPI += '&staff_ids=$idStaff';
+      }
+
+      final response = await wcConnector.httpGet(
+        wcConnector.getOAuthURLExternal(urlAPI).toUri()!,
+      );
+      if (response.body.isEmpty) {
+        return <String>{};
+      }
+
+      final result = convert.jsonDecode(response.body);
+      final records = result is Map ? result['records'] : result;
+      if (records is! List) {
+        return <String>{};
+      }
+
+      final dates = <String>{};
+      for (final record in records) {
+        if (record is! Map) continue;
+        final available = record['available'];
+        final count = available is num
+            ? available.toInt()
+            : int.tryParse('$available') ?? 0;
+        if (count <= 0) continue;
+        final date = '${record['date']}';
+        if (date.length >= 10) {
+          dates.add(date.substring(0, 10));
+        }
+      }
+      return dates;
+    } catch (err, trace) {
+      printLog('[getAvailableBookingDates] $err $trace');
+      return <String>{};
+    }
+  }
+
+  @override
   Future<Map<String, dynamic>>? checkBookingAvailability({data}) => null;
 
   @override

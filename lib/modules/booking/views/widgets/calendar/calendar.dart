@@ -14,6 +14,7 @@ class CalendarWidget extends StatefulWidget {
   final int? limitDay;
   final bool hasRestrictedDays;
   final bool Function(DateTime)? isRestrictedDay;
+  final void Function(DateTime)? onMonthChanged;
 
   const CalendarWidget.booking(
     this.context, {
@@ -23,6 +24,7 @@ class CalendarWidget extends StatefulWidget {
     this.limitDay,
     this.hasRestrictedDays = false,
     this.isRestrictedDay,
+    this.onMonthChanged,
   });
 
   @override
@@ -31,6 +33,13 @@ class CalendarWidget extends StatefulWidget {
 
 class _CalendarWidgetState extends State<CalendarWidget> {
   DateTime month = DateTime.now();
+
+  void _changeMonth(DateTime value) {
+    setState(() {
+      month = value;
+    });
+    widget.onMonthChanged?.call(value);
+  }
 
   String get langCode => context.watch<AppModel>().langCode;
 
@@ -108,11 +117,15 @@ class _CalendarWidgetState extends State<CalendarWidget> {
       height: heightCal,
       child: CalendarCarousel(
         onDayPressed: (DateTime time, List<EventInterface> events) {
+          // Days without availability are greyed out and must not be
+          // selectable: the calendar package still reports taps on them.
+          if (widget.hasRestrictedDays &&
+              (widget.isRestrictedDay?.call(time) ?? false)) {
+            return;
+          }
           widget.onDayPressed(time, events);
           if (time.month != month.month) {
-            setState(() {
-              month = time;
-            });
+            _changeMonth(time);
           }
         },
         targetDateTime: month,
@@ -128,9 +141,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
         markedDateIconMaxShown: 2,
         onCalendarChanged: (time) {
           if (time.compareTo(month) == 0) return;
-          setState(() {
-            month = time;
-          });
+          _changeMonth(time);
         },
         headerTextStyle: textStyle.copyWith(
           color: theme.colorScheme.secondary,

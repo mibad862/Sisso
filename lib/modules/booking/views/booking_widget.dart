@@ -51,6 +51,12 @@ class _BookingWidgetState extends State<BookingWidget> {
       hasRestrictedDays: widget.product.hasRestrictedDays,
       restrictedDays: widget.product.restrictedDays,
     );
+
+    // Availability does not depend on the staff list or on the slots of the
+    // selected day, so fetch it straight away instead of waiting for them.
+    // Otherwise the calendar only greys out after three sequential requests.
+    final availability = _loadAvailability(bookingChangeNotifier.current);
+
     await bookingNotifier.init(
       widget.product.id,
       hasStaff: widget.product.hasStaff ?? true,
@@ -58,6 +64,37 @@ class _BookingWidgetState extends State<BookingWidget> {
     if (staffs.isNotEmpty) {
       bookingChangeNotifier.setStaff(staffs.first);
     }
+    await availability;
+
+    // With a single practitioner the first request already returned their
+    // availability. Only refine it when several could differ.
+    if (staffs.length > 1) {
+      bookingChangeNotifier.resetAvailability();
+      await _loadAvailability(bookingChangeNotifier.current, force: true);
+    }
+
+    _prefetchNextMonth();
+  }
+
+  /// Greys out the days of [month] that have no free slot.
+  Future<void> _loadAvailability(DateTime month, {bool force = false}) async {
+    final staffId = bookingChangeNotifier.staff?.id;
+    await bookingChangeNotifier.loadAvailability(
+      month,
+      idStaff: staffId?.toString(),
+      force: force,
+    );
+    if (mounted) {
+      _prefetchNextMonth(from: month);
+    }
+  }
+
+  /// Warms the cache so swiping forward a month feels instant.
+  void _prefetchNextMonth({DateTime? from}) {
+    final base = from ?? bookingChangeNotifier.current;
+    final next = DateTime(base.year, base.month + 1);
+    final staffId = bookingChangeNotifier.staff?.id;
+    bookingChangeNotifier.loadAvailability(next, idStaff: staffId?.toString());
   }
 
   @override
@@ -138,25 +175,53 @@ class _BookingWidgetState extends State<BookingWidget> {
                             value?.id,
                           );
                           bookingChangeNotifier.setStaff.call(value);
-                        },
-                      ),
-                      CalendarWidget.booking(
-                        context,
-                        key: const ValueKey(
-                          BookingConstants.keyBookingChangeDate,
-                        ),
-                        selectedDateTime: bookingChangeNotifier.current,
-                        onDayPressed: (DateTime date, events) {
-                          bookingChangeNotifier.setDay(date);
-                          bookingNotifier.updateSlot(
-                            date,
-                            bookingChangeNotifier.staff?.id,
+                          bookingChangeNotifier.resetAvailability();
+                          _loadAvailability(
+                            bookingChangeNotifier.current,
+                            force: true,
                           );
                         },
-                        limitDay: kProductDetail.limitDayBooking,
-                        hasRestrictedDays:
-                            bookingChangeNotifier.hasRestrictedDays,
-                        isRestrictedDay: bookingChangeNotifier.isRestrictedDay,
+                      ),
+                      // Rebuilds when availability arrives so the days
+                      // without free slots are greyed out.
+                      Consumer<BookingChangeNotifier>(
+                        builder: (_, notifier, __) {
+                          final isLoading = notifier.isLoadingFirstAvailability;
+                          return Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              // Dimmed while loading so the user never sees
+                              // every day look bookable and then grey out.
+                              AnimatedOpacity(
+                                opacity: isLoading ? 0.35 : 1,
+                                duration: const Duration(milliseconds: 250),
+                                child: AbsorbPointer(
+                                  absorbing: isLoading,
+                                  child: CalendarWidget.booking(
+                                    context,
+                                    key: const ValueKey(
+                                      BookingConstants.keyBookingChangeDate,
+                                    ),
+                                    selectedDateTime: notifier.current,
+                                    onDayPressed: (DateTime date, events) {
+                                      notifier.setDay(date);
+                                      bookingNotifier.updateSlot(
+                                        date,
+                                        notifier.staff?.id,
+                                      );
+                                    },
+                                    limitDay: kProductDetail.limitDayBooking,
+                                    hasRestrictedDays:
+                                        notifier.hasRestrictedDays,
+                                    isRestrictedDay: notifier.isRestrictedDay,
+                                    onMonthChanged: _loadAvailability,
+                                  ),
+                                ),
+                              ),
+                              if (isLoading) kLoadingWidget(context),
+                            ],
+                          );
+                        },
                       ),
                       Divider(
                         height: 20,
