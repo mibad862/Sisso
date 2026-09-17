@@ -6,8 +6,15 @@ import '../../common/extensions/extensions.dart';
 class ShortDescription extends StatelessWidget {
   final Product product;
   final bool show;
+  final int maxLines;
+  final TextStyle? style;
 
-  const ShortDescription({required this.product, required this.show});
+  const ShortDescription({
+    required this.product,
+    required this.show,
+    this.maxLines = 1,
+    this.style,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +28,9 @@ class ShortDescription extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 5),
       child: Text(
         plainText,
-        maxLines: 1,
+        maxLines: maxLines,
         overflow: TextOverflow.ellipsis,
-        style: const TextStyle(fontSize: 13),
+        style: style ?? const TextStyle(fontSize: 13),
       ),
     );
   }

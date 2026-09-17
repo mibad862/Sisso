@@ -5,6 +5,7 @@ import '../../../common/tools.dart';
 import '../../../models/index.dart' show Product;
 import '../../modules/dynamic_layout/config/product_config.dart';
 import '../../services/index.dart';
+import '../card/short_description.dart';
 import 'action_button_mixin.dart';
 import 'index.dart' show CartIcon, CartQuantity, ProductOnSale, ProductPricing;
 import 'widgets/title.dart';
@@ -75,8 +76,11 @@ class ProductSimpleView extends StatelessWidget with ActionButtonMixin {
           decoration: BoxDecoration(
             color: type == SimpleType.backgroundColor && enableBackgroundColor
                 ? theme.primaryColorLight
-                : null,
+                : theme.cardColor,
             borderRadius: const BorderRadius.all(Radius.circular(20)),
+            border: Border.all(
+              color: theme.dividerColor.withValues(alpha: 0.35),
+            ),
           ),
           child: Padding(
             padding: const EdgeInsets.all(10.0),
@@ -86,10 +90,7 @@ class ProductSimpleView extends StatelessWidget with ActionButtonMixin {
               children: <Widget>[
                 Stack(
                   children: [
-                    ClipRRect(
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(10.0),
-                      ),
+                    ClipOval(
                       child: ImageResize(
                         url: item!.imageFeature,
                         width: imageWidth,
@@ -130,6 +131,17 @@ class ProductSimpleView extends StatelessWidget with ActionButtonMixin {
                               ),
                             ),
                         ],
+                      ),
+                      ShortDescription(
+                        product: item!,
+                        show: productConfig.showShortDescription,
+                        maxLines: 2,
+                        style: theme.textTheme.bodyMedium?.copyWith(
+                          fontSize: 14,
+                          color: theme.colorScheme.onSurface.withValues(
+                            alpha: 0.6,
+                          ),
+                        ),
                       ),
                       if (type != SimpleType.priceOnTheRight)
                         Row(

@@ -16,6 +16,11 @@ analyzer:
     - "**/*.freezed.dart"
     - build/**
     - "**/build/**"
+    - android/**
+    - ios/**
+    - web/**
+    - windows/**
+    - macos/**
   language:
     strict-raw-types: false
 

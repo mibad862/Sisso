@@ -16,7 +16,11 @@ class SimpleVerticalProductList extends StatelessWidget {
       children: [
         const SizedBox(width: 10.0),
         for (var item in products)
-          ProductSimpleView(item: item, type: SimpleType.priceOnTheRight),
+          ProductSimpleView(
+            item: item,
+            type: SimpleType.priceOnTheRight,
+            config: config,
+          ),
       ],
     );
   }

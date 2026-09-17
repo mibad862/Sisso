@@ -77,7 +77,9 @@ class _HomeScreenState extends BaseScreen<HomeScreen> {
         final backgroundConfig = appConfig.background;
 
         return Scaffold(
-          backgroundColor: Theme.of(context).colorScheme.surface,
+          backgroundColor: Theme.of(context).brightness == Brightness.dark
+              ? Theme.of(context).colorScheme.surface
+              : const Color(0xFFF7F7F9),
           body: NotificationListener<ScrollNotification>(
             onNotification: (scrollNotification) {
               if (backgroundConfig?.isScrollable != true) {
