@@ -13,12 +13,18 @@ class FetchProductLayout extends StatefulWidget {
   final String? layout;
   final double? ratioProductImage;
   final double? padding;
+
+  /// Optional keyword. When set the products are searched instead of being
+  /// listed by category, so search results use this same layout.
+  final String? search;
+
   const FetchProductLayout({
     this.category,
     this.scrollController,
     this.layout,
     this.ratioProductImage,
     this.padding,
+    this.search,
     super.key,
   });
 
@@ -65,6 +71,7 @@ class StateFetchProductLayout extends State<FetchProductLayout> {
         userId: userModel.user?.id,
         order: kProductCard.order,
         orderBy: kProductCard.orderby,
+        search: widget.search,
       ),
     );
     var values = await completer?.operation.valueOrCancellation();
@@ -99,6 +106,7 @@ class StateFetchProductLayout extends State<FetchProductLayout> {
           userId: userModel.user?.id,
           order: kProductCard.order,
           orderBy: kProductCard.orderby,
+          search: widget.search,
         ),
       );
       var values = await completer?.operation.valueOrCancellation();

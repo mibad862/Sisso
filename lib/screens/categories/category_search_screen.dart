@@ -1,14 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:flux_localization/flux_localization.dart';
 import 'package:inspireui/inspireui.dart' show AutoHideKeyboard;
-import 'package:provider/provider.dart';
 
 import '../../common/constants.dart';
-import '../../models/index.dart'
-    show BackDropArguments, Category, CategoryModel;
-import '../../routes/flux_navigate.dart';
 import '../common/app_bar_mixin.dart';
 import '../index.dart' show SearchBox;
+import 'widgets/fetch_product_layout.dart';
 
 class CategorySearch extends StatefulWidget {
   const CategorySearch();
@@ -23,8 +21,9 @@ class _CategorySearchState<T> extends State<CategorySearch> with AppBarMixin {
 
   final ScrollController _scrollController = ScrollController();
 
-  List<Category> categories = [];
-  String? _keyword;
+  /// Keyword actually sent to the API, updated after the user stops typing.
+  String _keyword = '';
+  Timer? _debounce;
 
   @override
   void initState() {
@@ -34,29 +33,31 @@ class _CategorySearchState<T> extends State<CategorySearch> with AppBarMixin {
 
   @override
   void dispose() {
+    _debounce?.cancel();
     _searchFieldNode.dispose();
     _searchFieldController.dispose();
     super.dispose();
   }
 
   void _onSearchTextChange(String value) {
-    setState(() {
-      _keyword = value;
-    });
-    if (value.isEmpty) {
+    // Searching hits the server, so wait until typing pauses.
+    _debounce?.cancel();
+    final keyword = value.trim();
+    if (keyword == _keyword) return;
+
+    if (keyword.isEmpty) {
       setState(() {
-        categories = [];
+        _keyword = '';
       });
       return;
     }
 
-    if (_searchFieldNode.hasFocus || value.isNotEmpty) {
-      final categoryModel = Provider.of<CategoryModel>(context, listen: false);
-      categories = categoryModel.categories!
-          .where((e) => e.name!.toLowerCase().contains(value.toLowerCase()))
-          .toList();
-      setState(() {});
-    }
+    _debounce = Timer(const Duration(milliseconds: 450), () {
+      if (!mounted) return;
+      setState(() {
+        _keyword = keyword;
+      });
+    });
   }
 
   @override
@@ -84,8 +85,6 @@ class _CategorySearchState<T> extends State<CategorySearch> with AppBarMixin {
           automaticallyImplyLeading: true,
           backgroundColor: theme.colorScheme.surface,
           iconTheme: theme.primaryIconTheme,
-          // textTheme: theme.primaryTextTheme,
-          // brightness: theme.primaryColorBrightness,
           centerTitle: false,
           leadingWidth: 24,
           titleSpacing: 0,
@@ -117,18 +116,15 @@ class _CategorySearchState<T> extends State<CategorySearch> with AppBarMixin {
   }
 
   Widget buildResult() {
-    if ((_keyword?.isNotEmpty ?? false) && categories.isEmpty) {
-      return Center(child: Text(S.of(context).notFound));
+    if (_keyword.isEmpty) {
+      return const SizedBox.shrink();
     }
-    return ListView.separated(
-      controller: _scrollController,
-      itemCount: categories.length,
-      itemBuilder: (context, index) {
-        var item = categories[index];
-        return _SearchCategoryItem(category: item);
-      },
-      separatorBuilder: (context, index) =>
-          Divider(color: Colors.black.withValueOpacity(0.05)),
+    // Same layout as the category page, so results look identical to
+    // browsing a category.
+    return FetchProductLayout(
+      key: ValueKey('categorySearch_$_keyword'),
+      search: _keyword,
+      scrollController: _scrollController,
     );
   }
 
@@ -138,52 +134,5 @@ class _CategorySearchState<T> extends State<CategorySearch> with AppBarMixin {
       currentFocus.unfocus();
     }
     Navigator.of(context).pop();
-  }
-}
-
-class _SearchCategoryItem extends StatelessWidget {
-  final Category category;
-
-  const _SearchCategoryItem({required this.category});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => FluxNavigate.pushNamed(
-        RouteList.backdrop,
-        arguments: BackDropArguments(
-          cateId: category.id,
-          cateName: category.name,
-        ),
-        context: context,
-      ),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
-        child: Row(
-          children: <Widget>[
-            Container(
-              width: 100,
-              height: 80,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(category.image!),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            const SizedBox(width: 10.0),
-            Expanded(
-              child: Text(
-                category.name!,
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
   }
 }
