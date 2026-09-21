@@ -34,7 +34,12 @@ class _StepperCheckoutWidgetState extends State<StepperCheckoutWidget> {
   Widget build(BuildContext context) {
     const sizeItem = 30.0;
     const paddingHorizontal = 50.0;
-    const sizeTitle = paddingHorizontal * 2 + sizeItem;
+    // Keep the labels inside the available width: with several steps the
+    // fixed size would overflow on narrow screens.
+    final sizeTitle = (widget.width / widget.items.length).clamp(
+      56.0,
+      paddingHorizontal * 2 + sizeItem,
+    );
 
     return SizedBox(
       width: widget.width,

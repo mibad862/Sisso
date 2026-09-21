@@ -3,6 +3,7 @@ import 'package:flux_localization/flux_localization.dart';
 import 'package:provider/provider.dart';
 
 import '../../../models/index.dart' show Category, CategoryModel;
+import '../../../modules/dynamic_layout/helper/helper.dart';
 import '../../base_screen.dart';
 import '../widgets/fetch_product_layout.dart';
 
@@ -31,6 +32,15 @@ class SubCategoriesLayout extends StatefulWidget {
 
 class _StateSubCategoriesLayout extends BaseScreen<SubCategoriesLayout> {
   int selectedIndex = 0;
+
+  /// Categories shown as a single-column card list rather than the grid.
+  /// Matched by id and by name so it survives a different environment.
+  static const _cardListCategoryIds = {'1914'};
+  static const _cardListCategoryNames = {'discovery'};
+
+  bool _usesCardList(Category category) =>
+      _cardListCategoryIds.contains('${category.id}') ||
+      _cardListCategoryNames.contains((category.name ?? '').toLowerCase().trim());
 
   @override
   Widget build(BuildContext context) {
@@ -87,6 +97,9 @@ class _StateSubCategoriesLayout extends BaseScreen<SubCategoriesLayout> {
                     key: Key(category.toString()),
                     category: category,
                     scrollController: widget.scrollController,
+                    // Discovery uses the single-column practitioner cards
+                    // from the lo-fi; every other category keeps the grid.
+                    layout: _usesCardList(category) ? Layout.simpleList : null,
                   );
                 },
               ),

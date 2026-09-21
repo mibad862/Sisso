@@ -9,6 +9,7 @@ import 'package:http/http.dart' as http;
 import '../common/config.dart';
 import '../common/constants.dart';
 import '../data/boxes.dart';
+import '../models/booking/booking_confirmation.dart';
 import '../models/comment.dart';
 import '../models/entities/branch.dart';
 import '../models/entities/listing_region.dart';
@@ -509,6 +510,23 @@ abstract class BaseServices {
     String idStaff,
     String date,
   ) => null;
+
+  /// Returns the appointments booked by [orderId], with the service,
+  /// practitioner and payment details resolved.
+  ///
+  /// Returning `null` means the platform cannot report bookings.
+  Future<List<BookingConfirmation>>? fetchBookingConfirmations({
+    required String orderId,
+    String? customerId,
+  }) => null;
+
+  /// Returns the appointments booked by [customerId], newest first.
+  ///
+  /// Returning `null` means the platform cannot report bookings.
+  Future<List<BookingConfirmation>>? fetchCustomerBookings({
+    required String customerId,
+    int limit = 20,
+  }) => null;
 
   /// Returns the set of dates (formatted `yyyy-MM-dd`) between [minDate] and
   /// [maxDate] that have at least one free appointment slot.

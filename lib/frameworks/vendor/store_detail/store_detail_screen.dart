@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flux_localization/flux_localization.dart';
 import 'package:flux_ui/flux_ui.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../common/config.dart';
 import '../../../common/constants.dart';
@@ -27,9 +28,24 @@ class StoreDetailScreen extends StatefulWidget {
 
 class _StoreDetailState extends State<StoreDetailScreen>
     with SingleTickerProviderStateMixin, AppBarMixin {
-  final List<String> _titles = ['shop', 'search', 'categories', 'info'];
+  final List<String> _titles = ['shop', 'info'];
 
   final _pageController = PageController();
+  final _outerScrollController = ScrollController();
+
+  /// Brings the services list into view. Services is already the first tab,
+  /// so only scrolling past the profile header actually shows it.
+  void _onBookSession() {
+    _onPageChange(0);
+    _tabController?.animateTo(0);
+    if (!_outerScrollController.hasClients) return;
+    final target = _outerScrollController.position.maxScrollExtent;
+    _outerScrollController.animateTo(
+      target,
+      duration: const Duration(milliseconds: 450),
+      curve: Curves.easeInOut,
+    );
+  }
   TabController? _tabController;
 
   void _onPageChange(int index) {
@@ -44,13 +60,13 @@ class _StoreDetailState extends State<StoreDetailScreen>
     return List.generate(_titles.length, (index) {
       switch (_titles[index]) {
         case 'shop':
-          return Tab(text: S.of(context).shop);
+          return const Tab(text: 'Services');
         case 'search':
           return Tab(text: S.of(context).search);
         case 'categories':
           return Tab(text: S.of(context).categories);
         case 'info':
-          return Tab(text: S.of(context).contact);
+          return const Tab(text: 'About');
         default:
           return const SizedBox();
       }
@@ -72,6 +88,87 @@ class _StoreDetailState extends State<StoreDetailScreen>
           return const SizedBox();
       }
     });
+  }
+
+  /// Practitioner phone, reduced to something `tel:` accepts.
+  ///
+  /// Stores sometimes hold more than one number ("(+351) 111 / (+351) 222")
+  /// or format them with spaces and brackets.
+  String? get _callableNumber {
+    final raw = widget.store?.phone?.trim() ?? '';
+    if (raw.isEmpty) return null;
+    final first = raw.split(RegExp(r'[/,;]')).first.trim();
+    final hasPlus = first.startsWith('+');
+    final digits = first.replaceAll(RegExp(r'[^0-9]'), '');
+    if (digits.length < 6) return null;
+    return hasPlus ? '+$digits' : digits;
+  }
+
+  Future<void> _callPractitioner(String number) async {
+    final uri = Uri(scheme: 'tel', path: number);
+    try {
+      final launched = await launchUrl(
+        uri,
+        mode: LaunchMode.externalApplication,
+      );
+      if (!launched && mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Could not start a call to $number')),
+        );
+      }
+    } catch (_) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Could not start a call to $number')),
+      );
+    }
+  }
+
+  /// Book session + Free call, as in the design. Free call only appears when
+  /// the practitioner has a number on file.
+  Widget _buildFreeCallButton(ThemeData theme) {
+    final number = _callableNumber;
+
+    final bookButton = ElevatedButton(
+      onPressed: _onBookSession,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: theme.primaryColor,
+        foregroundColor: Colors.white,
+        elevation: 0,
+        padding: const EdgeInsets.symmetric(vertical: 14),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(26),
+        ),
+      ),
+      child: const Text('Book session'),
+    );
+
+    return Padding(
+      padding: const EdgeInsets.only(top: 16.0),
+      child: Row(
+        children: [
+          Expanded(child: bookButton),
+          if (number != null) ...[
+            const SizedBox(width: 10),
+            Expanded(
+              child: OutlinedButton.icon(
+                onPressed: () => _callPractitioner(number),
+                icon: const Icon(Icons.phone_rounded, size: 18),
+                label: const Text('Free call'),
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: theme.primaryColor,
+                  side: BorderSide(color: theme.primaryColor),
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(26),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
   }
 
   String get bannerUrl => widget.store.bannerUrl;
@@ -129,6 +226,7 @@ class _StoreDetailState extends State<StoreDetailScreen>
         child: DefaultTabController(
           length: _titles.length,
           child: NestedScrollView(
+            controller: _outerScrollController,
             headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
               return <Widget>[
                 SliverAppBar(
@@ -312,6 +410,7 @@ class _StoreDetailState extends State<StoreDetailScreen>
                                     ],
                                   ),
 
+                                  _buildFreeCallButton(theme),
                                   const SizedBox(height: 20.0),
                                 ],
                               ),

@@ -61,7 +61,9 @@ class _MyCartNormalLayoutState extends State<MyCartNormalLayout>
           context: context,
           removeTop: widget.hasNewAppBar && widget.isModal != true,
           child: Scaffold(
-            backgroundColor: Theme.of(context).colorScheme.surface,
+            backgroundColor: Theme.of(context).brightness == Brightness.dark
+                ? Theme.of(context).colorScheme.surface
+                : const Color(0xFFF7F7F9),
             floatingActionButtonLocation:
                 kAdvanceConfig.floatingCartCheckoutButtonLocation,
             floatingActionButton:

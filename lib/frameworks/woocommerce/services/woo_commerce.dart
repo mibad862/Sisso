@@ -14,6 +14,7 @@ import '../../../common/constants.dart';
 import '../../../common/events.dart';
 import '../../../common/extensions/extensions.dart';
 import '../../../data/boxes.dart';
+import '../../../models/booking/booking_confirmation.dart';
 import '../../../models/booking/staff_booking_model.dart';
 import '../../../models/entities/branch.dart';
 import '../../../models/entities/order_delivery_date.dart';
@@ -2629,6 +2630,191 @@ class WooCommerceService extends BaseServices {
       return listSlot;
     }
     return <String>[];
+  }
+
+  /// Requests [path] on this site and decodes the JSON body.
+  Future<dynamic> _getAppointmentsJson(String path) async {
+    final response = await wcConnector.httpGet(
+      wcConnector.getOAuthURLExternal('$domain/wp-json/$path').toUri()!,
+    );
+    if (response.body.isEmpty) return null;
+    return convert.jsonDecode(response.body);
+  }
+
+  @override
+  Future<List<BookingConfirmation>> fetchCustomerBookings({
+    required String customerId,
+    int limit = 20,
+  }) async {
+    try {
+      final result = await _getAppointmentsJson(
+        'wc-appointments/v1/appointments'
+        '?customer_id=$customerId&per_page=$limit',
+      );
+      final records = result is Map ? result['records'] : result;
+      if (records is! List) return [];
+
+      final bookings = <BookingConfirmation>[];
+      final productOf = <int, String>{};
+      final staffOf = <int, String>{};
+      final costOf = <int, String>{};
+
+      for (final record in records) {
+        if (record is! Map) continue;
+        final booking = BookingConfirmation.fromJson(record);
+        if (booking == null) continue;
+        bookings.add(booking);
+
+        final productId = '${record['product_id']}';
+        if (productId.isNotEmpty && productId != 'null') {
+          productOf[booking.id] = productId;
+        }
+        final staff = record['staff_ids'] ?? record['staff_id'];
+        final staffId = staff is List
+            ? (staff.isNotEmpty ? '${staff.first}' : '')
+            : '$staff';
+        if (staffId.isNotEmpty && staffId != 'null' && staffId != '0') {
+          staffOf[booking.id] = staffId;
+        }
+        final cost = record['cost'];
+        if (cost != null) costOf[booking.id] = '$cost';
+      }
+
+      if (bookings.isEmpty) return [];
+
+      final productNames = <String, String>{};
+      final staffNames = <String, String>{};
+      await Future.wait<void>([
+        for (final id in productOf.values.toSet())
+          _getAppointmentsJson('wc/v3/products/$id')
+              .then((value) {
+                if (value is Map && value['name'] != null) {
+                  productNames[id] = '${value['name']}';
+                }
+              })
+              .catchError((_) {}),
+        for (final id in staffOf.values.toSet())
+          _getAppointmentsJson('wc-appointments/v1/staff/$id')
+              .then((value) {
+                if (value is Map) {
+                  final name = value['full_name'] ?? value['display_name'];
+                  if (name != null) staffNames[id] = '$name';
+                }
+              })
+              .catchError((_) {}),
+      ]);
+
+      final enriched = bookings
+          .map(
+            (booking) => booking.copyWith(
+              serviceName: productNames[productOf[booking.id]],
+              practitionerName: staffNames[staffOf[booking.id]],
+              total: costOf[booking.id],
+            ),
+          )
+          .toList();
+
+      // Newest first, so upcoming appointments lead the list.
+      enriched.sort((a, b) => b.start.compareTo(a.start));
+      return enriched;
+    } catch (err, trace) {
+      printLog('[fetchCustomerBookings] $err $trace');
+      return [];
+    }
+  }
+
+  @override
+  Future<List<BookingConfirmation>> fetchBookingConfirmations({
+    required String orderId,
+    String? customerId,
+  }) async {
+    try {
+      // The API ignores an `order_id` filter, so narrow by customer where
+      // possible and match the order on our side.
+      var path = 'wc-appointments/v1/appointments?per_page=50';
+      if (customerId?.isNotEmpty ?? false) {
+        path += '&customer_id=$customerId';
+      }
+      final result = await _getAppointmentsJson(path);
+      final records = result is Map ? result['records'] : result;
+      if (records is! List) return [];
+
+      final bookings = <BookingConfirmation>[];
+      final productIds = <String>{};
+      final staffIds = <String>{};
+      final productOf = <int, String>{};
+      final staffOf = <int, String>{};
+
+      for (final record in records) {
+        if (record is! Map) continue;
+        if ('${record['order_id']}' != orderId) continue;
+        final booking = BookingConfirmation.fromJson(record);
+        if (booking == null) continue;
+        bookings.add(booking);
+
+        final productId = '${record['product_id']}';
+        if (productId.isNotEmpty && productId != 'null') {
+          productIds.add(productId);
+          productOf[booking.id] = productId;
+        }
+        final staff = record['staff_ids'] ?? record['staff_id'];
+        final staffId = staff is List
+            ? (staff.isNotEmpty ? '${staff.first}' : '')
+            : '$staff';
+        if (staffId.isNotEmpty && staffId != 'null' && staffId != '0') {
+          staffIds.add(staffId);
+          staffOf[booking.id] = staffId;
+        }
+      }
+
+      if (bookings.isEmpty) return [];
+
+      // Resolve the related records together: on a slow site these add up
+      // quickly when run one after another.
+      final productNames = <String, String>{};
+      final staffNames = <String, String>{};
+      Map? order;
+
+      await Future.wait<void>([
+        for (final id in productIds)
+          _getAppointmentsJson('wc/v3/products/$id')
+              .then((value) {
+                if (value is Map && value['name'] != null) {
+                  productNames[id] = '${value['name']}';
+                }
+              })
+              .catchError((_) {}),
+        for (final id in staffIds)
+          _getAppointmentsJson('wc-appointments/v1/staff/$id')
+              .then((value) {
+                if (value is Map) {
+                  final name = value['full_name'] ?? value['display_name'];
+                  if (name != null) staffNames[id] = '$name';
+                }
+              })
+              .catchError((_) {}),
+        _getAppointmentsJson('wc/v3/orders/$orderId')
+            .then((value) {
+              if (value is Map) order = value;
+            })
+            .catchError((_) {}),
+      ]);
+
+      return bookings
+          .map(
+            (booking) => booking.copyWith(
+              serviceName: productNames[productOf[booking.id]],
+              practitionerName: staffNames[staffOf[booking.id]],
+              paymentMethodTitle: order?['payment_method_title']?.toString(),
+              total: order?['total']?.toString(),
+              currency: order?['currency']?.toString(),
+            ),
+          )
+          .toList();
+    } catch (err, trace) {
+      printLog('[fetchBookingConfirmations] $err $trace');
+      return [];
+    }
   }
 
   @override

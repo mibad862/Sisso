@@ -39,6 +39,21 @@ class SimpleLayout extends StatefulWidget {
 class _SimpleLayoutState extends State<SimpleLayout>
     with SingleTickerProviderStateMixin {
   late final _scrollController = widget.scrollController ?? ScrollController();
+
+  /// Anchor for the "See details" shortcut.
+  final _descriptionKey = GlobalKey();
+
+  /// Scrolls the description into view from the top of the page.
+  Future<void> _scrollToDescription() async {
+    final target = _descriptionKey.currentContext;
+    if (target == null) return;
+    await Scrollable.ensureVisible(
+      target,
+      duration: const Duration(milliseconds: 450),
+      curve: Curves.easeInOut,
+      alignment: 0.05,
+    );
+  }
   final ValueNotifier<int> _selectIndexNotifier = ValueNotifier(0);
 
   late Product product;
@@ -248,6 +263,30 @@ class _SimpleLayoutState extends State<SimpleLayout>
                                     ),
                                   ),
                                 ),
+                              if (product.description?.isNotEmpty ?? false)
+                                SliverToBoxAdapter(
+                                  child: Align(
+                                    alignment: AlignmentDirectional.centerStart,
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 8.0,
+                                      ),
+                                      child: TextButton.icon(
+                                        onPressed: _scrollToDescription,
+                                        icon: const Icon(
+                                          Icons.arrow_downward_rounded,
+                                          size: 16,
+                                        ),
+                                        label: const Text('See details'),
+                                        style: TextButton.styleFrom(
+                                          foregroundColor: Theme.of(
+                                            context,
+                                          ).primaryColor,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               if (!Services().widget.enableShoppingCart(
                                     product.copyWith(isRestricted: false),
                                   ) &&
@@ -290,7 +329,12 @@ class _SimpleLayoutState extends State<SimpleLayout>
                                             ProductBrand(
                                               product: widget.product,
                                             ),
-                                            ProductDescription(product),
+                                            KeyedSubtree(
+                                              key: _descriptionKey,
+                                              child: ProductDescription(
+                                                product,
+                                              ),
+                                            ),
                                             if (widget.isProductInfoLoading ==
                                                 false)
                                               ProductSizeGuide(widget.product),

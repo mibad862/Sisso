@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 import '../../common/config.dart';
 import '../../common/config/models/cart_config.dart';
 import '../../common/constants.dart';
+import '../../models/booking/booking_confirmation.dart';
 import '../../models/checkout/review_model.dart';
 import '../../models/index.dart' show CartModel, Order;
 import '../../models/tera_wallet/wallet_model.dart';
@@ -21,6 +22,7 @@ import '../../widgets/product/product_bottom_sheet.dart';
 import '../../widgets/web_layout/web_layout.dart';
 import '../base_screen.dart';
 import '../cart/my_cart_layout/my_cart_normal_layout_web.dart';
+import 'booking_confirmation_screen.dart';
 import 'review_screen.dart';
 import 'widgets/payment_methods.dart';
 import 'widgets/stepper_checkout_widet.dart';
@@ -91,147 +93,42 @@ class _CheckoutState extends BaseScreen<Checkout> {
   Widget _renderProgressBar() {
     final theme = Theme.of(context);
 
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.end,
-      children: <Widget>[
-        kPaymentConfig.enableAddress
-            ? Expanded(
-                child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      tabIndex = 0;
-                    });
-                  },
-                  child: Column(
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 13),
-                        child: Text(
-                          S.of(context).address.toUpperCase(),
-                          style: TextStyle(
-                            color: tabIndex == 0
-                                ? theme.primaryColor
-                                : theme.colorScheme.secondary,
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      tabIndex >= 0
-                          ? ClipRRect(
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(2.0),
-                                bottomLeft: Radius.circular(2.0),
-                              ),
-                              child: Container(
-                                height: 3.0,
-                                color: theme.primaryColor,
-                              ),
-                            )
-                          : Divider(
-                              height: 2,
-                              color: theme.colorScheme.secondary,
-                            ),
-                    ],
-                  ),
-                ),
-              )
-            : const SizedBox(),
-        enabledShipping
-            ? Expanded(
-                child: Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 13),
-                      child: Text(
-                        S.of(context).shipping.toUpperCase(),
-                        style: TextStyle(
-                          color: tabIndex == 1
-                              ? theme.primaryColor
-                              : theme.colorScheme.secondary,
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    tabIndex >= 1
-                        ? Container(height: 3.0, color: theme.primaryColor)
-                        : Divider(
-                            height: 2,
-                            color: theme.colorScheme.secondary,
-                          ),
-                  ],
-                ),
-              )
-            : const SizedBox(),
-        kPaymentConfig.enablePreview
-            ? Expanded(
-                child: Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 13),
-                      child: Text(
-                        S.of(context).preview.toUpperCase(),
-                        style: TextStyle(
-                          color: tabIndex == 2
-                              ? theme.primaryColor
-                              : theme.colorScheme.secondary,
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    tabIndex >= 2
-                        ? Container(height: 3.0, color: theme.primaryColor)
-                        : Divider(
-                            height: 2,
-                            color: theme.colorScheme.secondary,
-                          ),
-                  ],
-                ),
-              )
-            : const SizedBox(),
-        isEnabledHybridCheckout
-            ? const SizedBox()
-            : Expanded(
-                child: Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 13),
-                      child: Text(
-                        S.of(context).payment.toUpperCase(),
-                        style: TextStyle(
-                          color: tabIndex == 3
-                              ? theme.primaryColor
-                              : theme.colorScheme.secondary,
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    tabIndex >= 3
-                        ? ClipRRect(
-                            borderRadius: const BorderRadius.only(
-                              topRight: Radius.circular(2.0),
-                              bottomRight: Radius.circular(2.0),
-                            ),
-                            child: Container(
-                              height: 3.0,
-                              color: theme.primaryColor,
-                            ),
-                          )
-                        : Divider(
-                            height: 2,
-                            color: theme.colorScheme.secondary,
-                          ),
-                  ],
-                ),
-              ),
-      ],
+    // Steps disabled in the config take no part in the flow, so build the
+    // stepper from the enabled ones instead of a fixed list.
+    final steps = <(int, String)>[
+      if (kPaymentConfig.enableAddress) (0, S.of(context).address),
+      if (enabledShipping) (1, S.of(context).shipping),
+      if (kPaymentConfig.enablePreview) (2, S.of(context).review.toTitleCase()),
+      if (!isEnabledHybridCheckout) (3, S.of(context).payment),
+    ];
+    if (steps.isEmpty) {
+      return const SizedBox();
+    }
+
+    var currentStep = steps.indexWhere((step) => step.$1 == tabIndex);
+    if (currentStep < 0) {
+      currentStep = 0;
+    }
+
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.only(top: 18, bottom: 16),
+      decoration: BoxDecoration(
+        color: theme.colorScheme.surface,
+        border: Border(
+          bottom: BorderSide(color: theme.dividerColor.withValueOpacity(0.4)),
+        ),
+      ),
+      child: LayoutBuilder(
+        builder: (context, constraints) => StepperCheckoutWidget(
+          currentStep: currentStep,
+          width: constraints.maxWidth,
+          items: [
+            for (var i = 0; i < steps.length; i++)
+              StepperCheckoutItem(index: i, title: steps[i].$2),
+          ],
+        ),
+      ),
     );
   }
 
@@ -256,12 +153,41 @@ class _CheckoutState extends BaseScreen<Checkout> {
     }
   }
 
+  /// Appointments get a booking confirmation; everything else keeps the
+  /// standard order receipt.
+  Widget _buildOrderResult() {
+    final order = newOrder!;
+    final receipt = OrderedSuccess(order: order, hasScroll: isDesktop == false);
+
+    return FutureBuilder<List<BookingConfirmation>?>(
+      future: Services().api.fetchBookingConfirmations(
+        orderId: '${order.id}',
+        customerId: order.customerId,
+      ),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState != ConnectionState.done) {
+          return receipt;
+        }
+        final bookings = snapshot.data ?? [];
+        if (bookings.isEmpty) {
+          return receipt;
+        }
+        return BookingConfirmationScreen(
+          orderId: '${order.id}',
+          customerId: order.customerId,
+          bookings: bookings,
+          useScaffold: false,
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
     var body = newOrder != null
-        ? OrderedSuccess(order: newOrder!, hasScroll: isDesktop == false)
+        ? _buildOrderResult()
         : Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -376,9 +302,11 @@ class _CheckoutState extends BaseScreen<Checkout> {
       child: Stack(
         children: <Widget>[
           Scaffold(
-            backgroundColor: theme.colorScheme.surface.withValueOpacity(
-              isDesktop ? 0.1 : 1,
-            ),
+            backgroundColor: isDesktop
+                ? theme.colorScheme.surface.withValueOpacity(0.1)
+                : (theme.brightness == Brightness.dark
+                      ? theme.colorScheme.surface
+                      : const Color(0xFFF7F7F9)),
             appBar: isDesktop
                 ? null
                 : AppBar(

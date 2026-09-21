@@ -41,6 +41,7 @@ dependencies:
   dio: 5.10.0
   http_auth: 1.0.4
   share_plus: 13.2.0
+  add_2_calendar: 3.0.1
   tuple: 2.0.2
   collection: any
   quiver: 3.2.2

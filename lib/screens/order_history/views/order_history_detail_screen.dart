@@ -13,6 +13,7 @@ import '../../../models/index.dart'
 import '../../../services/index.dart';
 import '../../../widgets/common/loading_body.dart';
 import '../../base_screen.dart';
+import '../../checkout/booking_confirmation_screen.dart';
 import '../../checkout/widgets/success.dart';
 import '../models/order_history_detail_model.dart';
 import 'widgets/order_notes.dart';
@@ -276,6 +277,23 @@ class _OrderHistoryDetailScreenState
                 },
               ),
               actions: [
+                // TEMPORARY: entry point to preview the booking
+                // confirmation screen while checkout is disabled.
+                IconButton(
+                  tooltip: 'Booking details',
+                  icon: Icon(
+                    Icons.event_available,
+                    color: theme.colorScheme.secondary,
+                  ),
+                  onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => BookingConfirmationScreen(
+                        orderId: '${order.id}',
+                        customerId: order.customerId,
+                      ),
+                    ),
+                  ),
+                ),
                 if (kOrderConfig.enableReorder &&
                     ServerConfig().isSupportReorder &&
                     loggedIn &&

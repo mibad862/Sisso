@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flux_localization/flux_localization.dart';
 
 import '../../../common/constants.dart';
 import '../../../screens/common/app_bar_mixin.dart';
@@ -33,7 +32,8 @@ class VendorListScreenState extends State<VendorListScreen>
         elevation: 0,
         backgroundColor: Theme.of(context).colorScheme.surface,
         title: Text(
-          S.of(context).stores,
+          // Client wording: practitioners, not stores.
+          'Practitioners',
           style: Theme.of(
             context,
           ).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w700),

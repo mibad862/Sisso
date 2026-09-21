@@ -206,12 +206,26 @@ class _BackdropState extends State<Backdrop>
       return backgroundColor.getColorBasedOnBackground;
     }
 
-    return (productFilterColor?.labelColor != null
-            ? HexColor(productFilterColor?.labelColor)
-            : systemLabelColor)
-        .withValueOpacity(
-          productFilterColor?.labelColorOpacity.toDouble() ?? 1.0,
-        );
+    final configured =
+        (productFilterColor?.labelColor != null
+                ? HexColor(productFilterColor?.labelColor)
+                : systemLabelColor)
+            .withValueOpacity(
+              productFilterColor?.labelColorOpacity.toDouble() ?? 1.0,
+            );
+
+    /// A configured label colour can be unreadable against the configured
+    /// background (white on white, for instance), which makes the filters
+    /// look like they are not rendering at all. Fall back to a legible
+    /// colour when the two are too close.
+    final background = backgroundColor;
+    final contrast =
+        (configured.computeLuminance() - background.computeLuminance()).abs();
+    if (contrast < 0.15) {
+      return background.getColorBasedOnBackground;
+    }
+
+    return configured;
   }
 
   @override

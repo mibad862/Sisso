@@ -82,7 +82,7 @@ class CategoriesScreenState extends State<VendorCategoriesScreen>
                     0: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Text(
-                        S.of(context).stores.toUpperCase(),
+                        'PRACTITIONERS',
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 12,

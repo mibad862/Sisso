@@ -163,28 +163,41 @@ class ShoppingCartRow extends StatelessWidget with ActionButtonMixin {
           return CartItemWebWidget(stateUI);
         }
 
-        return LayoutBuilder(
-          builder: (context, constraints) {
-            switch (cartStyle) {
-              case CartStyle.short:
-                return CartItemShortTypeWidget(
-                  stateUI,
-                  constraintsCurrent: constraints,
-                );
-              case CartStyle.style01:
-                return CartItemStyle01Widget(
-                  stateUI,
-                  constraintsCurrent: constraints,
-                );
-              case CartStyle.normal:
-              default:
-                return CartItemNormalWidget(
-                  stateUI,
-                  heightImageFeature: constraints.maxWidth * 0.3,
-                  widthImageFeature: constraints.maxWidth * 0.25,
-                );
-            }
-          },
+        // Cards give the cart and the checkout review a consistent,
+        // readable separation between items.
+        return Container(
+          margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: Theme.of(context).cardColor,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(
+              color: Theme.of(context).dividerColor.withValues(alpha: 0.35),
+            ),
+          ),
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              switch (cartStyle) {
+                case CartStyle.short:
+                  return CartItemShortTypeWidget(
+                    stateUI,
+                    constraintsCurrent: constraints,
+                  );
+                case CartStyle.style01:
+                  return CartItemStyle01Widget(
+                    stateUI,
+                    constraintsCurrent: constraints,
+                  );
+                case CartStyle.normal:
+                default:
+                  return CartItemNormalWidget(
+                    stateUI,
+                    heightImageFeature: constraints.maxWidth * 0.3,
+                    widthImageFeature: constraints.maxWidth * 0.25,
+                  );
+              }
+            },
+          ),
         );
       },
     );

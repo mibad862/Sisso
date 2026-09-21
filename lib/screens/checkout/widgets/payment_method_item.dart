@@ -34,20 +34,18 @@ class PaymentMethodItem extends StatelessWidget {
           },
           child: Container(
             decoration: BoxDecoration(
-              color: paymentMethod.id == selectedId
+              color: isSelected
                   ? Theme.of(context).primaryColorLight
-                  : Colors.transparent,
-              borderRadius: useDesktopStyle ? BorderRadius.circular(10) : null,
-              border: useDesktopStyle
-                  ? Border.all(
-                      color: isSelected
-                          ? Theme.of(context).primaryColor
-                          : Theme.of(
-                              context,
-                            ).colorScheme.secondary.withValueOpacity(0.2),
-                      width: 2,
-                    )
-                  : null,
+                  : Theme.of(context).cardColor,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                color: isSelected
+                    ? Theme.of(context).primaryColor
+                    : Theme.of(
+                        context,
+                      ).colorScheme.secondary.withValueOpacity(0.15),
+                width: isSelected ? 2 : 1,
+              ),
             ),
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
@@ -55,8 +53,8 @@ class PaymentMethodItem extends StatelessWidget {
                 children: [
                   Row(
                     children: <Widget>[
-                      Radio<String?>(value: paymentMethod.id),
-                      const SizedBox(width: 10),
+                      _SelectionIndicator(isSelected: isSelected),
+                      const SizedBox(width: 12),
                       Expanded(
                         child: Builder(
                           builder: (context) {
@@ -109,11 +107,41 @@ class PaymentMethodItem extends StatelessWidget {
             ),
           ),
         ),
-        if (useDesktopStyle)
-          const SizedBox(height: 15)
-        else
-          const Divider(height: 1),
+        SizedBox(height: useDesktopStyle ? 15 : 10),
       ],
+    );
+  }
+}
+
+class _SelectionIndicator extends StatelessWidget {
+  const _SelectionIndicator({required this.isSelected});
+
+  final bool isSelected;
+
+  @override
+  Widget build(BuildContext context) {
+    final color = isSelected
+        ? Theme.of(context).primaryColor
+        : Theme.of(context).colorScheme.secondary.withValueOpacity(0.35);
+    return Container(
+      width: 22,
+      height: 22,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        border: Border.all(color: color, width: 2),
+      ),
+      child: isSelected
+          ? Center(
+              child: Container(
+                width: 10,
+                height: 10,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Theme.of(context).primaryColor,
+                ),
+              ),
+            )
+          : null,
     );
   }
 }

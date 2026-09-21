@@ -18,6 +18,11 @@ class LanguageScreen extends StatefulWidget {
 class _LanguageScreenState extends State<LanguageScreen> with AppBarMixin {
   bool isUpdating = false;
 
+  Color _backgroundColor(BuildContext context) =>
+      Theme.of(context).brightness == Brightness.dark
+      ? Theme.of(context).colorScheme.surface
+      : const Color(0xFFF7F7F9);
+
   @override
   Widget build(BuildContext context) {
     var list = <Widget>[];
@@ -35,76 +40,89 @@ class _LanguageScreenState extends State<LanguageScreen> with AppBarMixin {
       }
       final isSelected = currentLanguage == languages[i]['code'];
       list.add(
-        ListTile(
-          leading: FluxImage(
-            imageUrl: languages[i]['icon'],
-            width: 30,
-            height: 20,
-            fit: BoxFit.cover,
+        Container(
+          margin: const EdgeInsets.only(bottom: 10),
+          decoration: BoxDecoration(
+            color: Theme.of(context).cardColor,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(
+              color: isSelected
+                  ? Theme.of(context).primaryColor
+                  : Theme.of(context).dividerColor.withValues(alpha: 0.35),
+              width: isSelected ? 2 : 1,
+            ),
           ),
-          title: Text(
-            languages[i]['text'],
-            style: Theme.of(context).primaryTextTheme.titleMedium,
-          ),
-          onTap: isUpdating
-              ? null
-              : () {
-                  if (isSelected) {
-                    return;
-                  }
-                  setState(() {
-                    isUpdating = true;
-                  });
-                  Provider.of<AppModel>(
-                    context,
-                    listen: false,
-                  ).changeLanguage(languages[i]['code'], context).then((_) {
+          child: ListTile(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(14),
+            ),
+            contentPadding: const EdgeInsets.symmetric(
+              horizontal: 20,
+              vertical: 6,
+            ),
+            leading: FluxImage(
+              imageUrl: languages[i]['icon'],
+              width: 30,
+              height: 20,
+              fit: BoxFit.cover,
+            ),
+            title: Text(
+              languages[i]['text'],
+              style: Theme.of(
+                context,
+              ).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w700),
+            ),
+            onTap: isUpdating
+                ? null
+                : () {
+                    if (isSelected) {
+                      return;
+                    }
                     setState(() {
-                      isUpdating = false;
+                      isUpdating = true;
                     });
-                    FlashHelper.message(
+                    Provider.of<AppModel>(
                       context,
-                      message: S.of(context).languageSuccess,
-                    );
-                    context.navigator.pop();
-                  });
-                },
-          trailing: !isSelected
-              ? null
-              : Icon(Icons.check, color: Theme.of(context).primaryColor),
+                      listen: false,
+                    ).changeLanguage(languages[i]['code'], context).then((_) {
+                      setState(() {
+                        isUpdating = false;
+                      });
+                      FlashHelper.message(
+                        context,
+                        message: S.of(context).languageSuccess,
+                      );
+                      context.navigator.pop();
+                    });
+                  },
+            trailing: !isSelected
+                ? null
+                : Icon(Icons.check, color: Theme.of(context).primaryColor),
+          ),
         ),
       );
-      if (i < languages.length - 1) {
-        list.add(
-          Divider(
-            color: Theme.of(context).primaryColorLight,
-            height: 1.0,
-            indent: 75,
-            endIndent: 30,
-          ),
-        );
-      }
     }
 
     return renderScaffold(
       routeName: RouteList.language,
       secondAppBar: AppBar(
+        centerTitle: true,
+        elevation: 0,
         title: Text(
           S.of(context).language,
           style: TextStyle(
-            color: Theme.of(context).primaryColor.getColorBasedOnBackground,
+            color: Theme.of(context).colorScheme.onSurface,
+            fontWeight: FontWeight.w700,
           ),
         ),
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: _backgroundColor(context),
         leading: isUpdating
             ? Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: SizedBox.square(
                   dimension: 24.0,
                   child: CircularProgressIndicator(
-                    color: Theme.of(
-                      context,
-                    ).primaryColor.getColorBasedOnBackground,
+                    color: Theme.of(context).primaryColor,
                     strokeWidth: 2.0,
                   ),
                 ),
@@ -114,15 +132,14 @@ class _LanguageScreenState extends State<LanguageScreen> with AppBarMixin {
                   onTap: () => Navigator.pop(context),
                   child: Icon(
                     Icons.arrow_back_ios,
-                    color: Theme.of(
-                      context,
-                    ).primaryColor.getColorBasedOnBackground,
+                    color: Theme.of(context).primaryColor,
                   ),
                 ),
               ),
       ),
-      backgroundColor: Theme.of(context).colorScheme.surface,
+      backgroundColor: _backgroundColor(context),
       child: SingleChildScrollView(
+        padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
         child: Column(
           children: [
             ...list,

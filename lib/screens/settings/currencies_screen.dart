@@ -49,12 +49,18 @@ class _CurrenciesScreenState extends BaseScreen<CurrenciesScreen>
           padding: showAppBar(RouteList.currencies) ? EdgeInsets.zero : null,
         ),
         child: Scaffold(
+          backgroundColor: _backgroundColor(context),
           appBar: AppBar(
+            centerTitle: true,
+            elevation: 0,
+            backgroundColor: _backgroundColor(context),
             title: Text(
               S.of(context).currencies,
-              style: TextStyle(color: Theme.of(context).colorScheme.surface),
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.onSurface,
+                fontWeight: FontWeight.w700,
+              ),
             ),
-            backgroundColor: Theme.of(context).primaryColor,
             leading: Center(
               child: GestureDetector(
                 onTap: () {
@@ -62,7 +68,7 @@ class _CurrenciesScreenState extends BaseScreen<CurrenciesScreen>
                 },
                 child: Icon(
                   Icons.arrow_back_ios,
-                  color: Theme.of(context).colorScheme.surface,
+                  color: Theme.of(context).primaryColor,
                 ),
               ),
             ),
@@ -98,9 +104,9 @@ class _CurrenciesScreenState extends BaseScreen<CurrenciesScreen>
         //   ...unsupportedCurrencies
         // ];
         return ListView.separated(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
           itemCount: currencies.length,
-          separatorBuilder: (_, __) =>
-              const Divider(color: Colors.black12, height: 1.0, indent: 75),
+          separatorBuilder: (_, __) => const SizedBox(height: 10),
           itemBuilder: (_, index) {
             final currency = currencies[index];
             return buildItem(
@@ -113,32 +119,65 @@ class _CurrenciesScreenState extends BaseScreen<CurrenciesScreen>
     );
   }
 
+  Color _backgroundColor(BuildContext context) =>
+      Theme.of(context).brightness == Brightness.dark
+      ? Theme.of(context).colorScheme.surface
+      : const Color(0xFFF7F7F9);
+
   Widget buildItem(Currency currency, {bool isEnable = true}) {
-    return Card(
-      elevation: 0,
-      margin: const EdgeInsets.all(0),
-      child: ListTile(
-        enabled: isEnable,
-        title: Text('${currency.currencyDisplay} (${currency.symbol})'),
-        onTap: () {
-          setState(() {
-            currencyDisplay = currency.currencyDisplay;
-          });
+    final theme = Theme.of(context);
+    final isSelected = currencyDisplay == currency.currencyDisplay;
 
-          Provider.of<AppModel>(
-            context,
-            listen: false,
-          ).changeCurrency(context, currency);
+    return Opacity(
+      opacity: isEnable ? 1 : 0.4,
+      child: Container(
+        decoration: BoxDecoration(
+          color: theme.cardColor,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(
+            color: isSelected
+                ? theme.primaryColor
+                : theme.dividerColor.withValues(alpha: 0.35),
+            width: isSelected ? 2 : 1,
+          ),
+        ),
+        child: ListTile(
+          enabled: isEnable,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+          ),
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 6,
+          ),
+          title: Text(
+            '${currency.currencyDisplay} (${currency.symbol})',
+            style: theme.textTheme.bodyLarge?.copyWith(
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          onTap: () {
+            setState(() {
+              currencyDisplay = currency.currencyDisplay;
+            });
 
-          FlashHelper.message(
-            context,
-            message: S.of(context).changedCurrencyTo(currency.currencyDisplay),
-          );
-          context.navigator.pop();
-        },
-        trailing: currencyDisplay == currency.currencyDisplay
-            ? const Icon(Icons.done)
-            : Container(width: 20),
+            Provider.of<AppModel>(
+              context,
+              listen: false,
+            ).changeCurrency(context, currency);
+
+            FlashHelper.message(
+              context,
+              message: S
+                  .of(context)
+                  .changedCurrencyTo(currency.currencyDisplay),
+            );
+            context.navigator.pop();
+          },
+          trailing: isSelected
+              ? Icon(Icons.check, color: theme.primaryColor)
+              : const SizedBox(width: 20),
+        ),
       ),
     );
   }

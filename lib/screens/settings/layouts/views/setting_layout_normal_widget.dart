@@ -3,6 +3,7 @@ import 'package:flux_localization/flux_localization.dart';
 
 import '../../../../services/services.dart';
 import '../../../common/delete_account_mixin.dart';
+import '../../widgets/profile_bookings_section.dart';
 import '../mixins/branch_mixin.dart';
 import '../mixins/setting_normal_mixin.dart';
 import '../setting_builder_layout.dart';
@@ -92,6 +93,8 @@ class _SettingLayoutNormalWidgetState extends State<SettingLayoutNormalWidget>
                 ],
               ),
             ),
+            // Bookings the customer has made; hidden when signed out or empty.
+            const ProfileBookingsSection(),
             if (logoutItemWidget != null)
               Padding(
                 padding: const EdgeInsets.symmetric(

@@ -8,6 +8,7 @@ import '../../services/index.dart';
 import '../card/short_description.dart';
 import 'action_button_mixin.dart';
 import 'index.dart' show CartIcon, CartQuantity, ProductOnSale, ProductPricing;
+import 'widgets/rating.dart';
 import 'widgets/title.dart';
 
 enum SimpleType { backgroundColor, priceOnTheRight }
@@ -37,8 +38,8 @@ class ProductSimpleView extends StatelessWidget with ActionButtonMixin {
     var productConfig = config ?? ProductConfig.empty();
 
     var screenWidth = MediaQuery.sizeOf(context).width;
-    var imageWidth = 60.0;
-    var imageHeight = 60.0;
+    var imageWidth = 64.0;
+    var imageHeight = 64.0;
 
     final theme = Theme.of(context);
 
@@ -124,7 +125,8 @@ class ProductSimpleView extends StatelessWidget with ActionButtonMixin {
                               child: ProductTitle(
                                 product: item!,
                                 style: const TextStyle(
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 16,
                                 ),
                                 hide: productConfig.hideTitle,
                                 maxLines: productConfig.titleLine,
@@ -143,6 +145,16 @@ class ProductSimpleView extends StatelessWidget with ActionButtonMixin {
                           ),
                         ),
                       ),
+                      if (productConfig.enableRating)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 2),
+                          child: ProductRating(
+                            product: item!,
+                            enableRating: productConfig.enableRating,
+                            hideEmptyProductListRating:
+                                productConfig.hideEmptyProductListRating,
+                          ),
+                        ),
                       if (type != SimpleType.priceOnTheRight)
                         Row(
                           children: [
